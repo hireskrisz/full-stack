@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +16,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        for($i=0;$i<10;++$i){
+            DB::table('tickets')->insert([
+                'price' => rand(100,1000),
+                'from' => Str::random(10),
+                'to' => Str::random(10),
+                'type' => Str::random(4),
+                'validDate' =>Str::random(10)
+            ]);
+        }
     }
 }
