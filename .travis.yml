@@ -1,0 +1,49 @@
+jobs:
+  include:
+    - language: php
+      php:
+        - 7.3
+      services:
+        - mysql
+      cache:
+        directories:
+          - node_modules
+          - vendor
+      before_script:
+        - cd ./tick-it-easy-backend
+        - cp .env.travis .env
+        - sudo mysql -e 'create database tick_it_easy;'
+        - composer self-update
+        - composer install --prefer-source --no-interaction --dev
+        - php artisan key:generate
+        - php artisan migrate
+        - php artisan db:seed
+      after_success:
+        - git checkout main
+        - git merge develop
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        keep_history: true
+        on:
+          branch: master
+    - language: node_js
+      node_js:
+        - '12'
+
+      addons:
+        apt:
+          sources:
+            - google-chrome
+          packages:
+            - google-chrome-stable
+
+      cache:
+        directories:
+          - ./node_modules
+
+      install:
+        - npm install
+      script:
+        - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
+
