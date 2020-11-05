@@ -20,6 +20,6 @@ before_script:
   - php artisan migrate
   - php artisan db:seed
 
-deploy:
+after_success:
   - git checkout main
   - git merge develop
