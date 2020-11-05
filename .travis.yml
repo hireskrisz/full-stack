@@ -19,3 +19,10 @@ before_script:
   - php artisan key:generate  
   - php artisan migrate
   - php artisan db:seed
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  keep_history: true
+  on:
+    branch: master
