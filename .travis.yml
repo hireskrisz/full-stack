@@ -13,7 +13,7 @@ cache:
     - vendor
 before_script:  
   - cp ./tick-it-easy-backend/.env.travis .env  
-  - sudo mysql -e 'create database tick-it-easy;'  
+  - sudo mysql -e 'create database tick_it_easy;'  
   - composer self-update  
   - composer install --prefer-source --no-interaction --dev  
   - php artisan key:generate  
