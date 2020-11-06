@@ -52,3 +52,11 @@ jobs:
         - npm run build
       script:
         - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
+      deploy:
+        provider: heroku
+        skip_cleanup: true
+        api_key:
+          secure: "QV1um6DH8S+VkoJGtcWbVdG71Af6e8+uF4qrWIAQRVhL02joce3KMgvmKwzuQW8JQ2jngRPFSuC3Jq8VZsXeb4/d1lR8tRMxXnWhwZCfjDXaVLmkbfo3DfXuXO81t7oRb78+hsfE1IdrCZY5N9v+n+zyiPZ4SrCShZWlXnWLfG+KoqzA8VFZiPDZOju2gwT7XX1sIeUi1XvThccm6f/PHP4MBRz+sl2lhasvXXkltXsWmlj/XvQCBqPi6T1xsKy+x+rvqqFR9BopW8B+VlGGGoP0WsZ85VscP2J8XKs6VNHC5CARuSp8vDMVfUvdqbvsmmbQyVE4Brbc9g1NFyaXnS0XHZiz3VbM3r0/ei9q175NIrnrc57PhOJWw/zJ/cPEBQCPft7FFloKgWiU1w6HCmOoi+9las+9HWLWjW+wjFzXuovim3aBkdeimiilAtySZXDLBZhajKZqWhS664EBuJ6pFaNe9K3sf3eSUDnM+O12D+SJtN6K4ki3EpYHXw6KSUvw092ijYa4ocmYbxtkxsoJSQuyWgduOSPsHM7HaArj2kUIQQiyp52iC8Sr6mJCf+PexQJxF22fxpZBV3sxU7wqs/aqqBWlYAJKYeANsqiJJXabTYa6lJ0MduY97gdC4AFvEZ7GVrbt4n9d+VTR5LLijJY++mmhw7d5EgwAL8c="
+        app: tick-it-easy-fe
+        on:
+          branch: main
