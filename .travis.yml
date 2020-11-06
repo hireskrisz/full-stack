@@ -23,7 +23,7 @@ jobs:
         provider: heroku
         skip_cleanup: true
         api_key:
-            secure: "wWR/0SnYYkgXrNcHrEzL7AadmAZzajSE+wCLmvvKzundRh1N1uXJEhcNnk903DSVnmSpgc8hb72JN7t+jTOu6ioIk7VQRbr7iqdtnbY+f9E/x6/hxf9OZneG7z05m6o4YljnbQqg1H86Is8ANk7+17nDiDCnp3xiYuAZXNSl/RilOGRz9Jem2d1AsOj8hYlyjA6bbgaulZ6CtDQSZUMHRBlg2LGQ7713HQm/gnniiqv6MFj1dzalul0shBU4IHIrlVRFPnErwurHvncvYIaTpwcCap6IQf2PF3a5b33Gn1dH/l6gXPXAXtTcezRiCg30exF1Qe7Qw6a7GPWyQBSGo4LpOooRTzewn8lqAd76lyMc7fVa5CI+7wMDVetQuaodaEPhXDrFxsBkdCBmUf8yqDSvEo8w2sFJjW/MLRzBLOgrA2FMFzCbcbij//ETRtc5jhctxqODuUGSB/bm2AJ0U78MLau9YorCJg3CczvjOlTmn7LtLgXLkFxN7MgieQP38ECVlfma7QKzboE7dQ0UAnwUg3/VwPp21PFM/TjGU3XJsopbEIRqCIJBifwhwBtAT5mW0Q1mfpWTRUvqV3ezEk8j2IHJeE8u41wPG7d6tTOhgImVIq2WFFIdyf4N0c79FhOhi9vOHnR5suIMUqtX+bAVgm9PirTC8KzQ56g/J7g="
+            secure: "wfnv0mZ7VogWHeJ/i64XLAgGnekVrL49Lt+ZYMCqBQksCHmHDFrWOenE0vwzdbZdI71tU6L6F5priRILBiHpte2auCnI5UWRYqJ//XJT+aPUvL7WkDFCa48xNfi7Osw9aw+UdbG+cZOF/GZmzZx7r7hEeOTb2U8I0q73X8TuaFT2yrdIu6wPN/+NXgSRRRDha7VvFUdA/aGO9z48qgoP320kBnAt23OqfTynMVq4gh6mTK7ZjgTnXFTgYrnlOIY/Wr8aieGB8ufoM+tG8VYsb+S+bJYIOWxFTeia7xlk+Z9qTkErblh66xiXiBWOUdCeY+pFt+UBRh3ICO4yBkshl+dctOgsO0gndWHq59vY4Sxuf/6labZ7DCf3aWom1Opkt+cffH1YSBSgbR4C2fFlKN/+hgYufxX8Slv/I0Cm44wNLuq4CPJge43JIOnLtnvdk2ybNXfVeZa/Fp+EinGq2GUs/ZuENA1RKFDwGGC3zX0pkkbQo9tnls79uWWbIy+NqSjkDw/ssFGnNU41UEZEvxch5U4WzGtC4fN6S92oNdQF48UjXQlW61zazMVHy/FZV+MHkHHX7a2ujElAJ4LFD6lidfIdLWaCWjPN6AUg86TovjfakqyI7McXfJtvwB8r6iwsV08A0G59deZYMoUZtgHRg8uQHEI0AqwmeLGy0Tw="
         app: tick-it-easy-backend
         on:
           branch: main
@@ -48,3 +48,12 @@ jobs:
         - npm run build
       script:
         - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
+         
+      deploy:
+        provider: heroku
+        skip_cleanup: true
+        api_key:
+            secure: "wfnv0mZ7VogWHeJ/i64XLAgGnekVrL49Lt+ZYMCqBQksCHmHDFrWOenE0vwzdbZdI71tU6L6F5priRILBiHpte2auCnI5UWRYqJ//XJT+aPUvL7WkDFCa48xNfi7Osw9aw+UdbG+cZOF/GZmzZx7r7hEeOTb2U8I0q73X8TuaFT2yrdIu6wPN/+NXgSRRRDha7VvFUdA/aGO9z48qgoP320kBnAt23OqfTynMVq4gh6mTK7ZjgTnXFTgYrnlOIY/Wr8aieGB8ufoM+tG8VYsb+S+bJYIOWxFTeia7xlk+Z9qTkErblh66xiXiBWOUdCeY+pFt+UBRh3ICO4yBkshl+dctOgsO0gndWHq59vY4Sxuf/6labZ7DCf3aWom1Opkt+cffH1YSBSgbR4C2fFlKN/+hgYufxX8Slv/I0Cm44wNLuq4CPJge43JIOnLtnvdk2ybNXfVeZa/Fp+EinGq2GUs/ZuENA1RKFDwGGC3zX0pkkbQo9tnls79uWWbIy+NqSjkDw/ssFGnNU41UEZEvxch5U4WzGtC4fN6S92oNdQF48UjXQlW61zazMVHy/FZV+MHkHHX7a2ujElAJ4LFD6lidfIdLWaCWjPN6AUg86TovjfakqyI7McXfJtvwB8r6iwsV08A0G59deZYMoUZtgHRg8uQHEI0AqwmeLGy0Tw="
+        app: tick-it-easy-frontend
+        on:
+          branch: main
