@@ -23,7 +23,7 @@ jobs:
         provider: heroku
         skip_cleanup: true
         api_key:
-            secure: "9ff774b2-9d5e-4704-a718-c88fdd73d11a"
+            secure: "wWR/0SnYYkgXrNcHrEzL7AadmAZzajSE+wCLmvvKzundRh1N1uXJEhcNnk903DSVnmSpgc8hb72JN7t+jTOu6ioIk7VQRbr7iqdtnbY+f9E/x6/hxf9OZneG7z05m6o4YljnbQqg1H86Is8ANk7+17nDiDCnp3xiYuAZXNSl/RilOGRz9Jem2d1AsOj8hYlyjA6bbgaulZ6CtDQSZUMHRBlg2LGQ7713HQm/gnniiqv6MFj1dzalul0shBU4IHIrlVRFPnErwurHvncvYIaTpwcCap6IQf2PF3a5b33Gn1dH/l6gXPXAXtTcezRiCg30exF1Qe7Qw6a7GPWyQBSGo4LpOooRTzewn8lqAd76lyMc7fVa5CI+7wMDVetQuaodaEPhXDrFxsBkdCBmUf8yqDSvEo8w2sFJjW/MLRzBLOgrA2FMFzCbcbij//ETRtc5jhctxqODuUGSB/bm2AJ0U78MLau9YorCJg3CczvjOlTmn7LtLgXLkFxN7MgieQP38ECVlfma7QKzboE7dQ0UAnwUg3/VwPp21PFM/TjGU3XJsopbEIRqCIJBifwhwBtAT5mW0Q1mfpWTRUvqV3ezEk8j2IHJeE8u41wPG7d6tTOhgImVIq2WFFIdyf4N0c79FhOhi9vOHnR5suIMUqtX+bAVgm9PirTC8KzQ56g/J7g="
         app: tick-it-easy-backend
         on:
           branch: main
