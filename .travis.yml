@@ -11,7 +11,7 @@ jobs:
           - vendor
       before_script:
         - cd ./tick-it-easy-backend
-        - cp ./deployments/.env.travis .env
+        - cp .env.travis .env
         - sudo mysql -e 'create database tick_it_easy;'
         - composer self-update
         - composer install --prefer-source --no-interaction --dev
