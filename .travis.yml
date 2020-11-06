@@ -28,8 +28,8 @@ jobs:
         on:
           branch: main
       after_deploy:
-        - heroku run php artisan migrate --force
-        - heroku run php artisan db:seed --force
+        - heroku run php artisan migrate --force --app tick-it-easy-backend
+        - heroku run php artisan db:seed --force --app tick-it-easy-backend
 
     - language: node_js
       node_js:
