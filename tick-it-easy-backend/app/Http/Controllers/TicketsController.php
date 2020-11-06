@@ -44,9 +44,9 @@ class TicketsController extends Controller
      * @param  \App\Models\Tickets  $tickets
      * @return \Illuminate\Http\Response
      */
-    public function show(Tickets $tickets)
+    public function show($id)
     {
-        //
+        return Tickets::where('id',$id)->first();
     }
 
     /**
