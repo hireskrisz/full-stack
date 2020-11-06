@@ -28,8 +28,9 @@ jobs:
         on:
           branch: main
       after_deploy:
-        - heroku php artisan migrate --force
-        - heroku php artisan db:seed --force
+        - heroku run bash
+        - php artisan migrate --force
+        - php artisan db:seed --force
 
     - language: node_js
       node_js:
