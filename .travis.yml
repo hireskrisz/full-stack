@@ -23,7 +23,7 @@ jobs:
         provider: heroku
         skip_cleanup: true
         api_key:
-            secure: 54e9fe46-1d34-490a-9fc5-198ae68a1090
+            secure: "54e9fe46-1d34-490a-9fc5-198ae68a1090"
         app: tick-it-easy-backend
         on:
           branch: main
