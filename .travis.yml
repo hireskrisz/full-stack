@@ -23,7 +23,7 @@ jobs:
         provider: heroku
         skip_cleanup: true
         api_key:
-            secure: "wfnv0mZ7VogWHeJ/i64XLAgGnekVrL49Lt+ZYMCqBQksCHmHDFrWOenE0vwzdbZdI71tU6L6F5priRILBiHpte2auCnI5UWRYqJ//XJT+aPUvL7WkDFCa48xNfi7Osw9aw+UdbG+cZOF/GZmzZx7r7hEeOTb2U8I0q73X8TuaFT2yrdIu6wPN/+NXgSRRRDha7VvFUdA/aGO9z48qgoP320kBnAt23OqfTynMVq4gh6mTK7ZjgTnXFTgYrnlOIY/Wr8aieGB8ufoM+tG8VYsb+S+bJYIOWxFTeia7xlk+Z9qTkErblh66xiXiBWOUdCeY+pFt+UBRh3ICO4yBkshl+dctOgsO0gndWHq59vY4Sxuf/6labZ7DCf3aWom1Opkt+cffH1YSBSgbR4C2fFlKN/+hgYufxX8Slv/I0Cm44wNLuq4CPJge43JIOnLtnvdk2ybNXfVeZa/Fp+EinGq2GUs/ZuENA1RKFDwGGC3zX0pkkbQo9tnls79uWWbIy+NqSjkDw/ssFGnNU41UEZEvxch5U4WzGtC4fN6S92oNdQF48UjXQlW61zazMVHy/FZV+MHkHHX7a2ujElAJ4LFD6lidfIdLWaCWjPN6AUg86TovjfakqyI7McXfJtvwB8r6iwsV08A0G59deZYMoUZtgHRg8uQHEI0AqwmeLGy0Tw="
+            secure: "bUhrCe8OXnQBMXlvjvJZXINoQy295KA4CpXfy/QrcGLHooZO7WHNhXx7kxyFSUYUQJxTf1o2+sMhhhv1ln7OFWVhWeRx66gJlR43ai+q94I7MVBNmPTjBiEwx7kMUDXeBS1UrANuZxf+aV6DFHlP7gICAJDLsBDc1c2wVLpIzYeYYOqJ+ZUjVmcyXG6xkfsosOCGOoXR4mRHTLE55Wmf74Irv41mxu8VZ2LNuLSOGNfqhbQZwZKaV4i538D4c7EnAdIouSsFccfX4T5gvACnYbVbemmDkJIyWCLnwmb1M/fGa4VHLZ8UO4YovxkH9WOzzGYslsJ5d4O8el0vRhFmlgcCflmTJSlSKFI26RLt/dAV3k96lk7cJYoZYjHmzTcdTSYvK3k9xL3zJT2bkngbJ/HjeoEvbg3BgZg5rBjlAJMU6SOAF5rf3dq6iVM3XdxDjZ6IdchtAO+AjBBt2rTLurAHo4nktfJf+8tGtLtbs07/83NhfxYTCJeNPsJMtOvWVW8rbCmAao0gprr00kzbI/YaEA9FQo/1osEMoB+kjZbcCD/gQz96MSNuAgungeQHiwAFuR1jg7MXB050m/9FoiyGnwpZ4d8wDiQumX3ET+X5NeBFYb905k+AYrVSHMKPYPIdLTpPxTUBjRLydLViZ88WFWY/wl3T0CyT76lFWow="
         app: tick-it-easy-backend
         on:
           branch: main
@@ -53,7 +53,7 @@ jobs:
         provider: heroku
         skip_cleanup: true
         api_key:
-            secure: "wfnv0mZ7VogWHeJ/i64XLAgGnekVrL49Lt+ZYMCqBQksCHmHDFrWOenE0vwzdbZdI71tU6L6F5priRILBiHpte2auCnI5UWRYqJ//XJT+aPUvL7WkDFCa48xNfi7Osw9aw+UdbG+cZOF/GZmzZx7r7hEeOTb2U8I0q73X8TuaFT2yrdIu6wPN/+NXgSRRRDha7VvFUdA/aGO9z48qgoP320kBnAt23OqfTynMVq4gh6mTK7ZjgTnXFTgYrnlOIY/Wr8aieGB8ufoM+tG8VYsb+S+bJYIOWxFTeia7xlk+Z9qTkErblh66xiXiBWOUdCeY+pFt+UBRh3ICO4yBkshl+dctOgsO0gndWHq59vY4Sxuf/6labZ7DCf3aWom1Opkt+cffH1YSBSgbR4C2fFlKN/+hgYufxX8Slv/I0Cm44wNLuq4CPJge43JIOnLtnvdk2ybNXfVeZa/Fp+EinGq2GUs/ZuENA1RKFDwGGC3zX0pkkbQo9tnls79uWWbIy+NqSjkDw/ssFGnNU41UEZEvxch5U4WzGtC4fN6S92oNdQF48UjXQlW61zazMVHy/FZV+MHkHHX7a2ujElAJ4LFD6lidfIdLWaCWjPN6AUg86TovjfakqyI7McXfJtvwB8r6iwsV08A0G59deZYMoUZtgHRg8uQHEI0AqwmeLGy0Tw="
+            secure: "bUhrCe8OXnQBMXlvjvJZXINoQy295KA4CpXfy/QrcGLHooZO7WHNhXx7kxyFSUYUQJxTf1o2+sMhhhv1ln7OFWVhWeRx66gJlR43ai+q94I7MVBNmPTjBiEwx7kMUDXeBS1UrANuZxf+aV6DFHlP7gICAJDLsBDc1c2wVLpIzYeYYOqJ+ZUjVmcyXG6xkfsosOCGOoXR4mRHTLE55Wmf74Irv41mxu8VZ2LNuLSOGNfqhbQZwZKaV4i538D4c7EnAdIouSsFccfX4T5gvACnYbVbemmDkJIyWCLnwmb1M/fGa4VHLZ8UO4YovxkH9WOzzGYslsJ5d4O8el0vRhFmlgcCflmTJSlSKFI26RLt/dAV3k96lk7cJYoZYjHmzTcdTSYvK3k9xL3zJT2bkngbJ/HjeoEvbg3BgZg5rBjlAJMU6SOAF5rf3dq6iVM3XdxDjZ6IdchtAO+AjBBt2rTLurAHo4nktfJf+8tGtLtbs07/83NhfxYTCJeNPsJMtOvWVW8rbCmAao0gprr00kzbI/YaEA9FQo/1osEMoB+kjZbcCD/gQz96MSNuAgungeQHiwAFuR1jg7MXB050m/9FoiyGnwpZ4d8wDiQumX3ET+X5NeBFYb905k+AYrVSHMKPYPIdLTpPxTUBjRLydLViZ88WFWY/wl3T0CyT76lFWow="
         app: tick-it-easy-frontend
         on:
           branch: main
