@@ -11,11 +11,11 @@ Egy weboldal, ahol különböző járatokra és különböző jármű típusokra
 * **Admin user:** tud a jegyeken módosítani, újat hozzáadni, listázni, törölni
 # Feladat nem funkcionális követelményei
 **Technológiák:** 
-* adatbázis: MySQL
+* adatbázis: MySQL, Produkciós környezetben PostGreSQL
     - legalább 4 táblát
     - legyen benne 1-sok kapcsolat
     - legyen benne sok-sok kapcsolat
-* szerveroldalon: Java Spring Boot
+* szerveroldalon: Laravel 8
     - MVC modell
     - REST API
     - authorizált végpontokkal
