@@ -8,7 +8,7 @@ Egy weboldal, ahol különböző járatokra és különböző jármű típusokra
 # Feladat funkcionális követelményeit
 * **Alkalmazás:** kezdőoldalon megjelennek a legfrissebb jegyek, egy oldalon összesítve vannak a jegyek szűréssel párosítva, egy kosár oldal amit lehet módosítani, felhasználói profil módosítási lehetőségekkel
 * **Felhasználó:** be tud jelentkezni, profilján tud módisítani, jegyeket tud a kosarába pakolini / kivenni / vásárolni / egyenleget feltölteni, tud böngészni az oldalon bejelentkezés nélkül
-* **Admin user:** tud a jegyeken módosítani, újat hozzáadni, listázni, törölni
+* **Admin user:** tud a jegyeken módosítani, újat hozzáadni, listázni, törölni, járatokat módosítani, törölni, ha az adott járathoz tartozó jármű már nem hozható forgalomba, új járműveket, járatokat felvenni, módosítani
 # Feladat nem funkcionális követelményei
 **Technológiák:** 
 * adatbázis: MySQL, Produkciós környezetben PostGreSQL
