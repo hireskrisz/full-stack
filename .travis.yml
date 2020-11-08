@@ -23,7 +23,7 @@ jobs:
         provider: heroku
         skip_cleanup: true
         api_key:
-            secure: "jjIpkCklgLqGu1RAViIxjmAXOXPLRW2ENqrsCDI5FRGVR3gFc5W6oipPI0vR1IwqW0VrndGirucxXgvG8QcJDNuoD0+YRajz0H+kyRdmsM0E5wWRNSpbduoi9peBan2tKRknYTkNu6jYm3hzLix0meCw780BxfjeBvP+kIesqPy/dPkmAxBD/o8LwiymbnYPFHogKzIvrIyGnd49FT1MQYQhlEXihd24iF4IPAGPuHW1855gmNgdMN1Wu1tSX7y+bqKgDJ+cPNE2olS6DO1J/V9oDlV++pO94VYpTGUpI4pBifn3tceAbm7PN985e+10P9tjJe7glBhtopTmoFyqNOQiUOeob8olcxWNc1FCNWcrq8Y/loO0k+lLz1pXX2U7eWYM29SFrffHzut9VlSDgs3Qh3nWCLGJMQLgtkVuLkHGRZ0vj1XDF7D/ZVAtlFKVWVf7isydk7OdKZKvD9TCBdD4MAnLh93eZxjtpHVvpLWhlCTPcqQJ2LR3kfogtf1qBxf8oAgiUVIWNOmrPakiTjgZDVcwF9lsiGjsJGACUAaDmjKH3pX1LKxxcpCz0UacIxk6hXTjG+X2h56NovBtBolvuKjZO1dRZp4D/Pr4ZMZReFdWyRRvfCkhn23fqXQIrmi3W9DIzljlwY1RuB7iOmKp7t4q/ait9JZl879NIs0="
+            secure: "ew+fHOW5mUAgLNtxKTvn8hVTqp0EFmRzZNdp46NETL1BAn90uSxUGm0XQ0Ucl3lWQEkcTlO6c7BQQUeO4WPrPThVrFbaUcIem7PIlvwO3PBKDOsZ7Uz+m+rW4PQ/0L0ceWgq3czmU+uNen9Z96zBbEJnm0Z/sUkQTjL5W1Jxrp9CbsnI5UuJ4xvTu5veccqIeTuY/uVvo68LFSN03Dqfad6xpXIOikve2cm4Of/Aq3BD2oZmVa+9KfQbtIqArxYNymMAPc9LQ9c6/0e8dhHaCr/dplHl7bP3y4kCTXE7senDEufDGi+/LLAoO/tXngp0DcJ+KPJIkYJaQSaUB4Yckt+bjuOYtpW04XkdNhaToGe565eH8PdtMGzMygcpsPaMzPKtqYQE+w6uJ9LF06VBQ5vXhqax2kb7+LmzKmg3exV7snzu8QKvsZRIrMuNtoas35ilSy1ve73DdfLCOZf76fPYJOfmIMqy3Kk5bG/U6IjFe/yy4TmEMtnhSu1isMMmGJtAmxQfSbhE/Y7rd+d8FsrAEEsYMSzCiVjhrTg529rcBpRGGID1ggaViV1R2rx6RV7sNWo1SncNFVsdDrGdRca3aoBsUHxaAgxMc1DDfIqMztSt5T/w9F3u7TzGEVWcmMx0aosgjF72Z5OhzSPRTZmKOTAi/HreTqJRTkLqyDI="
         app: tick-it-easy-backend
         on:
           branch: main
