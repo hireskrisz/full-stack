@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Route;
+use App\Models\Route;
+
 
 class RoutesController extends Controller
 {
