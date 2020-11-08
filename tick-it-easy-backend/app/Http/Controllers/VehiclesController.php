@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Vehicle;
 
 class VehiclesController extends Controller
 {
@@ -13,7 +14,7 @@ class VehiclesController extends Controller
      */
     public function index()
     {
-        //
+        return Vehicle::all();
     }
 
     /**
@@ -45,7 +46,7 @@ class VehiclesController extends Controller
      */
     public function show($id)
     {
-        //
+        return Ticket::where('id',$id)->first();
     }
 
     /**
