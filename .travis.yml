@@ -29,7 +29,6 @@ jobs:
           branch: main
         run: 
            - php artisan migrate --force
-           - php artisan db:seed --force
 
     - language: node_js
       node_js:
