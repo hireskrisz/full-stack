@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             VehicleSeeder::class,
             RouteSeeder::class,
-            TicketSeeder::class
+            TicketSeeder::class,
+            UserSeeder::class
         ]);
     }
 }
