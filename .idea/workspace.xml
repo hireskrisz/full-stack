@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5dbf3739-02a8-424a-8514-a82e1bc40715" name="Default Changelist" comment="" />
+    <list default="true" id="5dbf3739-02a8-424a-8514-a82e1bc40715" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/secure/secure.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/secure/secure.component.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +28,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -34,6 +38,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/app/public" />
       <recent name="$PROJECT_DIR$/frontend" />
       <recent name="$PROJECT_DIR$/frontend/dist/frontend" />
       <recent name="$PROJECT_DIR$/frontend/src/app" />
@@ -52,6 +57,9 @@
       <workItem from="1604611017543" duration="608000" />
       <workItem from="1604675902656" duration="8376000" />
       <workItem from="1604741211306" duration="620000" />
+      <workItem from="1604761897162" duration="15000" />
+      <workItem from="1604834237355" duration="2891000" />
+      <workItem from="1604844572111" duration="4371000" />
     </task>
     <task id="LOCAL-00001" summary="adding basic FE app and travis ci config">
       <created>1604607500967</created>
@@ -102,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604688215887</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="adding login wip 1">
+      <created>1604848901994</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1604848901994</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +129,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="adding basic FE app and travis ci config" />
     <MESSAGE value="update travis ci config" />
     <MESSAGE value="adding deploy" />
@@ -121,18 +137,24 @@
     <MESSAGE value="adding deploy wip 3" />
     <MESSAGE value="adding deploy wip 3 delete procfile" />
     <MESSAGE value="adding deploy wip sok" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding deploy wip sok" />
+    <MESSAGE value="adding login wip 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding login wip 1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="724" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604841527109">
+      <screen x="63" y="27" width="1857" height="1053" />
+    </state>
+    <state x="724" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@63.27.1857.1053" timestamp="1604841527109" />
     <state x="576" y="112" width="912" height="882" key="CommitChangelistDialog2" timestamp="1604688215604">
       <screen x="63" y="27" width="1857" height="1053" />
     </state>
     <state x="2450" y="87" width="912" height="904" key="CommitChangelistDialog2/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@1920.0.1920.1080" timestamp="1604608039187" />
     <state x="576" y="112" width="912" height="882" key="CommitChangelistDialog2/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@63.27.1857.1053" timestamp="1604688215604" />
-    <state x="2694" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1604613050184">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="812" y="317" width="424" height="484" key="FileChooserDialogImpl" timestamp="1604761909434">
+      <screen x="63" y="27" width="1857" height="1053" />
     </state>
     <state x="2694" y="297" width="424" height="484" key="FileChooserDialogImpl/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@1920.0.1920.1080" timestamp="1604613050184" />
+    <state x="812" y="317" key="FileChooserDialogImpl/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@63.27.1857.1053" timestamp="1604761909434" />
     <state x="2164" y="103" width="1485" height="872" key="MergeDialog" timestamp="1604607386520">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

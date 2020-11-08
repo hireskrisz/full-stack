@@ -15,7 +15,7 @@ export class SecureComponent implements OnInit {
     const headers = new HttpHeaders({
       'Authorization': `Barer ${localStorage.getItem('token')}`
     });
-    this.http.get('https://tick-it-easy-backend.herokuapp.com/users').subscribe( result => {
+    this.http.get('https://tick-it-easy-backend.herokuapp.com/user').subscribe( result => {
       console.log(result);
       this.user = result;
     }, error => {
