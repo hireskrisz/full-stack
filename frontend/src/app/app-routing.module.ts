@@ -1,21 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {PublicComponent} from "./public/public.component";
-import {SecureComponent} from "./secure/secure.component";
-import {HomeComponent} from "./public/home/home.component";
-import {LoginComponent} from "./public/login/login.component";
 
-const routes: Routes = [
-  {
-    path: '',
-    component: PublicComponent,
-    children: [
-      { path: '', component: HomeComponent },
-      { path: 'login', component: LoginComponent }
-    ]
-  },
-  {path: 'secure', component: SecureComponent}
-];
+
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
