@@ -7,7 +7,7 @@ use App\Models\Vehicle;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 
-class RoutesSeeder extends Seeder
+class RoutesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

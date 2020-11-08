@@ -46,7 +46,7 @@ class VehiclesController extends Controller
      */
     public function show($id)
     {
-        return Ticket::where('id',$id)->first();
+        return Vehicle::where('id',$id)->first();
     }
 
     /**

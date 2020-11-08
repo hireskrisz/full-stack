@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 
-class UsersSeeder extends Seeder
+class UsersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,8 +15,8 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
-        $this->makeUser('Erdősi Péter','peter@erdosi.com',bcrypt('12345678'),'',true);
-        $this->makeUser('Hires Krisztián','hires@krisztian.com',bcrypt('12345678'),'',true);
+        $this->makeUser('Peti','peter.erdosi2@gmail.com',bcrypt('alkfejl123'),'',true);
+        $this->makeUser('user1','bigbyceps88@gmail.com',bcrypt('12345678'),'',false);
     }
 
     function makeUser($name,$email,$password,$bucket,$isAdmin){
