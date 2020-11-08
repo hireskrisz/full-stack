@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TicketsController;
 use App\Http\Controllers\VehiclesController;
 use App\Http\Controllers\RoutesController;
-use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +17,11 @@ use App\Http\Controllers\UserController;
 |
 */
 
+
 Route::resource('tickets', TicketsController::class);
 Route::resource('vehicles', VehiclesController::class);
 Route::resource('routes', RoutesController::class);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

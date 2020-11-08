@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use App\Models\Route;
 
-class TicketsSeeder extends Seeder
+class TicketsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
