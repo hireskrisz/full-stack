@@ -48,6 +48,8 @@ jobs:
         - cd frontend
         - npm install
         - npm run build
+      script:
+        - npm run test
       deploy:
         provider: heroku
         skip_cleanup: true
