@@ -15,8 +15,8 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        $this->makeUser('Peti','peter.erdosi2@gmail.com',bcrypt('alkfejl123'),'',true);
-        $this->makeUser('user1','bigbyceps88@gmail.com',bcrypt('12345678'),'',false);
+        $this->makeUser('Erdősi Péter','peter@erdosi.com',bcrypt('12345678'),'',true);
+        $this->makeUser('Hires Krisztián','hires@krisztian.com',bcrypt('12345678'),'',true);
     }
 
     function makeUser($name,$email,$password,$bucket,$isAdmin){
