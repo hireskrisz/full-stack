@@ -17,5 +17,4 @@ use App\Http\Controllers\TicketsController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/api/tickets', [TicketsController::class, 'index']);
-Route::get('/api/tickets/{id}', [TicketsController::class, 'show']);
+Route::resource('api/tickets', TicketsController::class);
