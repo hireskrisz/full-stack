@@ -1,10 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TicketsController;
-use App\Http\Controllers\VehiclesController;
-use App\Http\Controllers\RoutesController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +14,3 @@ use App\Http\Controllers\RoutesController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('api/tickets', TicketsController::class);
-Route::resource('api/vehicles', VehiclesController::class);
-Route::resource('api/routes', RoutesController::class);

@@ -1,11 +1,9 @@
 <?php
 
-namespace Database\Seeders;
-
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
-use App\Models\Route;
+use App\Route;
 
 class TicketSeeder extends Seeder
 {
@@ -23,7 +21,7 @@ class TicketSeeder extends Seeder
             $this->makeTicket($randomPrice,$route->id,$onDiscount,true);
         }
     }
-
+    
     function makeTicket($price,$routeID,$onDiscount,$available){
         DB::table('tickets')->insert([
             'price' => $price,

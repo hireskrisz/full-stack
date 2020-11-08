@@ -1,10 +1,6 @@
 <?php
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TicketsController;
-use App\Http\Controllers\VehiclesController;
-use App\Http\Controllers\RoutesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +13,10 @@ use App\Http\Controllers\RoutesController;
 |
 */
 
-Route::resource('tickets', TicketsController::class);
-Route::resource('vehicles', VehiclesController::class);
-Route::resource('routes', RoutesController::class);
+Route::resource('tickets', 'TicketsController');
+Route::resource('vehicles', 'VehiclesController');
+Route::resource('routes', 'RoutesController');
+
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});

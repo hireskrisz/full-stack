@@ -15,7 +15,7 @@ Egy weboldal, ahol különböző járatokra és különböző jármű típusokra
     - legalább 4 táblát
     - legyen benne 1-sok kapcsolat
     - legyen benne sok-sok kapcsolat
-* szerveroldalon: Laravel 8
+* szerveroldalon: Laravel 6
     - MVC modell
     - REST API
     - authorizált végpontokkal

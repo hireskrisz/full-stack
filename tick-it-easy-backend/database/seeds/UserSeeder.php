@@ -1,7 +1,5 @@
 <?php
 
-namespace Database\Seeders;
-
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -15,8 +13,8 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $this->makeUser('Peti','peter.erdosi2@gmail.com','alkfejl123','',true);
-        $this->makeUser('user1','bigbyceps88@gmail.com','user1','',false);
+        $this->makeUser('Peti','peter.erdosi2@gmail.com',bcrypt('alkfejl123'),'',true);
+        $this->makeUser('user1','bigbyceps88@gmail.com',bcrypt('12345678'),'',false);
     }
 
     function makeUser($name,$email,$password,$bucket,$isAdmin){

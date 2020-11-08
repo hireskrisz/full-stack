@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Tickets;
 use Illuminate\Http\Request;
+use App\Ticket;
 
 class TicketsController extends Controller
 {
@@ -14,7 +14,7 @@ class TicketsController extends Controller
      */
     public function index()
     {
-        return Tickets::all();
+        return Ticket::all();
     }
 
     /**
@@ -41,21 +41,21 @@ class TicketsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Tickets  $tickets
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        return Tickets::where('id',$id)->first();
+        return Ticket::where('id',$id)->first();
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Tickets  $tickets
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tickets $tickets)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +64,10 @@ class TicketsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Tickets  $tickets
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tickets $tickets)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +75,10 @@ class TicketsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Tickets  $tickets
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tickets $tickets)
+    public function destroy($id)
     {
         //
     }
