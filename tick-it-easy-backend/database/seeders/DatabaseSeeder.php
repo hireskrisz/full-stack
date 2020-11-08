@@ -16,14 +16,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        for($i=0;$i<10;++$i){
-            DB::table('tickets')->insert([
-                'price' => rand(100,1000),
-                'from' => Str::random(10),
-                'to' => Str::random(10),
-                'type' => Str::random(4),
-                'validDate' =>Str::random(10)
-            ]);
-        }
+        $this->call([
+            VehicleSeeder::class,
+            RouteSeeder::class,
+            TicketSeeder::class
+        ]);
     }
 }
