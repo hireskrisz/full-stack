@@ -18,7 +18,6 @@ jobs:
         - php artisan key:generate
         - php artisan migrate
         - php artisan db:seed
-        - php artisan serve
       script:
         - php artisan test --testsuite=Feature --stop-on-failure
       deploy:
