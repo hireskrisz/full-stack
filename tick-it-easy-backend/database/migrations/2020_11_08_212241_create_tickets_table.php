@@ -18,7 +18,7 @@ class CreateTicketsTable extends Migration
             $table->integer('price');
             $table->integer('routeID');
             $table->boolean('onDiscount');
-            $table->boolean('available');
+            $table->boolean('available')->default(true);
             $table->timestamps();
         });
     }
