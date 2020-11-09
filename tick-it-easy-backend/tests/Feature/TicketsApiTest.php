@@ -43,8 +43,7 @@ class TicketsApiTest extends TestCase
         $this->assertDatabaseHas('tickets',[
             'price' => 20000,
             'routeID' => 5,
-            'onDiscount' => intval(true),
-            'available' => intval(true)
+            'onDiscount' => boolval(true)
         ]);
         $response->assertStatus(200);
     }
@@ -79,8 +78,7 @@ class TicketsApiTest extends TestCase
         $this->assertDatabaseHas('tickets',[
             'price' => 20000,
             'routeID' => 5,
-            'onDiscount' => intval(true),
-            'available' => intval(true)
+            'onDiscount' => boolval(true)
         ]);
         $ticketFromDatabase = Ticket::where('price',20000)->where('routeID',5)->where('onDiscount',true)->first()->toArray();
         
