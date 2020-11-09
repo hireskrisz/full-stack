@@ -80,6 +80,13 @@ class TicketsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $ticket = Ticket::where('id',$id)->first();
+        if($ticket != null){
+            $ticket->delete();
+            return response()->json(['message'=> 'The id='.$id.' Ticket is deleted successfully','success'=>true]);
+        }
+        else{
+            return response()->json(['message'=> 'The id='.$id.' Ticket isn\'t in the database','success'=>false]);
+        }
     }
 }

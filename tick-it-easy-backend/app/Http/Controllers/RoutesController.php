@@ -80,6 +80,13 @@ class RoutesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $route = Route::where('id',$id)->first();
+        if($route != null){
+            $route->delete();
+            return response()->json(['message'=> 'The id='.$id.' Route is deleted successfully','success'=>true]);
+        }
+        else{
+            return response()->json(['message'=> 'The id='.$id.' Route isn\'t in the database','success'=>false]);
+        }
     }
 }

@@ -80,6 +80,13 @@ class VehiclesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $vehicle = Vehicle::where('id',$id)->first();
+        if($vehicle != null){
+            $vehicle->delete();
+            return response()->json(['message'=> 'The id='.$id.' Vehicle is deleted successfully','success'=>true]);
+        }
+        else{
+            return response()->json(['message'=> 'The id='.$id.' Vehicle isn\'t in the database','success'=>false]);
+        }
     }
 }
