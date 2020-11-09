@@ -71,6 +71,8 @@ class RoutesController extends Controller
             $route->to = $request->input('to');
             $route->startTime =  Carbon::createFromFormat('Y-m-d H:i:s',$request->input('startTime'));
             $route->endTime = Carbon::createFromFormat('Y-m-d H:i:s',$request->input('endTime'));
+            $route->startTime->setTimezone('Europe/Paris');
+            $route->endTime->setTimezone('Europe/Paris');
             $route->activePassengers = 0;
             $route->vehicleID = intval($request->input('vehicleID'));
             $route->save();
@@ -168,13 +170,20 @@ class RoutesController extends Controller
                     return response()->json(['success'=>false,'message'=>'That route is already exists in the database']);
                 }
             }
+            $startTime = Carbon::createFromFormat('Y-m-d H:i:s',$request->input('startTime'));
+            $endTime = Carbon::createFromFormat('Y-m-d H:i:s',$request->input('endTime'));
+            $startTime->setTimezone('Europe/Paris');
+            $endTime->setTimezone('Europe/Paris');
+            $date = Carbon::createFromFormat('Y-m-d H:i:s', Carbon::now());
+            $date->setTimezone('Europe/Paris');
             DB::table('routes')->where('id',$id)->update([
                 'from' => $request->input('from'),
                 'to' => $request->input('to'),
-                'startTime' =>  Carbon::createFromFormat('Y-m-d H:i:s',$request->input('startTime')),
-                'endTime' =>  Carbon::createFromFormat('Y-m-d H:i:s',$request->input('endTime')),
+                'startTime' =>  $startTime,
+                'endTime' =>  $endTime,
                 'activePassengers' => $route->activePassengers,
-                'vehicleID' => intval($request->input('vehicleID'))
+                'vehicleID' => intval($request->input('vehicleID')),
+                'updated_at' => $date
             ]);
             return response()->json([
                 'success'=>true,
