@@ -18,12 +18,13 @@ jobs:
         - php artisan key:generate
         - php artisan migrate
         - php artisan db:seed
-
+      script:
+        - php artisan test --testsuite=Feature --stop-on-failure
       deploy:
         provider: heroku
         skip_cleanup: true
         api_key:
-            secure: "ew+fHOW5mUAgLNtxKTvn8hVTqp0EFmRzZNdp46NETL1BAn90uSxUGm0XQ0Ucl3lWQEkcTlO6c7BQQUeO4WPrPThVrFbaUcIem7PIlvwO3PBKDOsZ7Uz+m+rW4PQ/0L0ceWgq3czmU+uNen9Z96zBbEJnm0Z/sUkQTjL5W1Jxrp9CbsnI5UuJ4xvTu5veccqIeTuY/uVvo68LFSN03Dqfad6xpXIOikve2cm4Of/Aq3BD2oZmVa+9KfQbtIqArxYNymMAPc9LQ9c6/0e8dhHaCr/dplHl7bP3y4kCTXE7senDEufDGi+/LLAoO/tXngp0DcJ+KPJIkYJaQSaUB4Yckt+bjuOYtpW04XkdNhaToGe565eH8PdtMGzMygcpsPaMzPKtqYQE+w6uJ9LF06VBQ5vXhqax2kb7+LmzKmg3exV7snzu8QKvsZRIrMuNtoas35ilSy1ve73DdfLCOZf76fPYJOfmIMqy3Kk5bG/U6IjFe/yy4TmEMtnhSu1isMMmGJtAmxQfSbhE/Y7rd+d8FsrAEEsYMSzCiVjhrTg529rcBpRGGID1ggaViV1R2rx6RV7sNWo1SncNFVsdDrGdRca3aoBsUHxaAgxMc1DDfIqMztSt5T/w9F3u7TzGEVWcmMx0aosgjF72Z5OhzSPRTZmKOTAi/HreTqJRTkLqyDI="
+            secure: "a+pPC17q932+zuTCnoAsvVLEqr8Q8elqnw1SUlR04Yh/Ha+ynfM/tAAw7Z0CrjkhPUgCE/Hb9c7aeXYXVgmEgCfLwiMX9/gEfg/s4n2eYMforECr5TA2wC902PGhcFu2WCEPPDyFUh1B9pIARBiYWGJCRDu5nGG+rh0X+8wz77+5vuSlBWUahdAKXgIaNdVHx7QkhiEnP3ALCNBa0mAhtrLPRgFDj2AIENIjK00e5NGjJ/+EVKw62cdanfpBCuJS+OTtAwln6jW5iS/zsLoqC6uDbGH2sIvcEziJ+ZND6SVHwbOEXBi0sp8bMUTUNFqoTLeAbPve9Du/bmWlmkRNyj7qa1/v0oswz/Myj+DZL4SEM+uwhnhVv/kQIQG+1BHindpyaaM1ZieFVonXVf5nSJbh697jUe72JHD4is7V+f00Vt/pYFwJUCvx6bgw2rbIORAr4hg8feTIz8H7443HAp9gwdcQRvGoUILPvS15oNHStb6Cx5fr3LVqoeuiIP/C69AUGvtGmv8dPmsn3R+KhCuYt4yaxme5oN3ZLduM6SYqs+a0K0OLooDu2OBDpXfGuNSlVW+TKP3UkZkV+CH7JE1GXIlp5VgQ8ArlbKIo1rVqh9GpURaTkjUMtloJMLIYk+YAjPCzuTPdkCjVpzqyUvuQdREHroXQ4MPCFzpCDWc="
         app: tick-it-easy-backend
         on:
           branch: main
