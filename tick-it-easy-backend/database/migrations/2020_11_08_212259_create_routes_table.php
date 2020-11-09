@@ -20,7 +20,6 @@ class CreateRoutesTable extends Migration
             $table->date('startTime');
             $table->date('endTime');
             $table->integer('activePassengers')->default(0);
-            $table->text('vehicleType');
             $table->integer('vehicleID')->nullable();
             $table->timestamps();
         });
