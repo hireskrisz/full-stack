@@ -30,24 +30,24 @@ class TicketsApiTest extends TestCase
         $response->assertStatus(200);
     }
 
-    // public function testCreateTicket(){
-    //     $response = $this->json(
-    //         'POST',
-    //         '/api/tickets',
-    //         [
-    //             'price' => 20000,
-    //             'routeID' => 5,
-    //             'onDiscount' => true
-    //         ]
-    //     );
-    //     $this->assertDatabaseHas('tickets',[
-    //         'price' => 20000,
-    //         'routeID' => 5,
-    //         'onDiscount' => true,
-    //         'available' => true
-    //     ]);
-    //     $response->assertStatus(200);
-    // }
+    public function testCreateTicket(){
+        $response = $this->json(
+            'POST',
+            '/api/tickets',
+            [
+                'price' => 20000,
+                'routeID' => 5,
+                'onDiscount' => true
+            ]
+        );
+        $this->assertDatabaseHas('tickets',[
+            'price' => 20000,
+            'routeID' => 5,
+            'onDiscount' => intval(true),
+            'available' => intval(true)
+        ]);
+        $response->assertStatus(200);
+    }
 
     public function testEditTicket(){
         $this->json(
@@ -79,8 +79,8 @@ class TicketsApiTest extends TestCase
         $this->assertDatabaseHas('tickets',[
             'price' => 20000,
             'routeID' => 5,
-            'onDiscount' => true,
-            'available' => true
+            'onDiscount' => intval(true),
+            'available' => intval(true)
         ]);
         $ticketFromDatabase = Ticket::where('price',20000)->where('routeID',5)->where('onDiscount',true)->first()->toArray();
         
