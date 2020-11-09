@@ -27,7 +27,12 @@ class TicketsController extends Controller
      */
     public function create()
     {
-        //
+        $routes = Route::all();
+        $tickets = Ticket::all();
+        return response()->json([
+            'routes' => $routes,
+            'tickets' => $tickets
+        ]);
     }
 
     /**
@@ -97,7 +102,14 @@ class TicketsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $editTicket = Ticket::where('id',$id)->first();
+        $routes = Route::all();
+        $tickets = Ticket::all();
+        return response()->json([
+            'editTicket' => $editTicket,
+            'routes' => $routes,
+            'tickets' => $tickets
+        ]);
     }
 
     /**

@@ -26,7 +26,10 @@ class VehiclesController extends Controller
      */
     public function create()
     {
-        //
+        $types =  ['busz','villamos','repülő'];
+        return response()->json([
+            'types' => $types
+        ]);
     }
 
     /**
@@ -100,7 +103,12 @@ class VehiclesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $vehicle = Vehicle::where('id',$id)->first();
+        $types = ['busz','villamos','repülő'];
+        return response()->json([
+            'vehicle' => $vehicle,
+            'types' => $types
+        ]);
     }
 
     /**

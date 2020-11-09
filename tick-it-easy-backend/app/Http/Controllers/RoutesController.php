@@ -27,7 +27,12 @@ class RoutesController extends Controller
      */
     public function create()
     {
-        //
+        $vechicles = Vehicle::all();
+        $routes = Route::all();
+        return response()->json([
+            'vehicles' => $vechicles,
+            'routes' => $routes
+        ]);
     }
 
     /**
@@ -120,7 +125,14 @@ class RoutesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $editRoute = Route::where('id',$id)->first();
+        $vechicles = Vehicle::all();
+        $routes = Route::all();
+        return response()->json([
+            'editRoute' => $editRoute,
+            'vehicles' => $vechicles,
+            'routes' => $routes
+        ]);
     }
 
     /**
