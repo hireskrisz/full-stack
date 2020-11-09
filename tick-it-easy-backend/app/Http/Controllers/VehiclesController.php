@@ -39,6 +39,7 @@ class VehiclesController extends Controller
     {
         $vehicle = new Vehicle;
         $types = ['busz','villamos','repülő'];
+        $this->validateDate($request->input('license'));
         if(!$request->exists('type') || !$request->exists('license') || !$request->exists('capacity')){
             return response()->json(['success'=>false,'message'=>'The type (busz,villamos,repülő) license (date: Y-m-d), capacity(integer) field is required']);
         }
@@ -67,15 +68,13 @@ class VehiclesController extends Controller
 
     function validateDate($date){
         if(preg_match('/\d{4}-\d{2}-\d{2}/',$date)){
-            $month = explode('-',$date)[1];
-            $day = explode('-',$date)[2];
-            if(intval($month)>12){
-                return false;
-            }
-            elseif(intval($day)>31){
-                return false;
-            }else{
+            $year = intval(explode('-',$date)[0]);
+            $month = intval(explode('-',$date)[1]);
+            $day = intval(explode('-',$date)[2]);
+            if(checkdate($month,$day,$year)){
                 return true;
+            }else{
+                return false;
             }
         }else{
             return false;
