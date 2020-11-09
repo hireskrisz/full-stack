@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Vehicle;
-use App\Rules\VehicleType;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
