@@ -17,8 +17,8 @@ class CreateRoutesTable extends Migration
             $table->id();
             $table->text('from');
             $table->text('to');
-            $table->date('startTime');
-            $table->date('endTime');
+            $table->dateTime('startTime');
+            $table->dateTime('endTime');
             $table->integer('activePassengers')->default(0);
             $table->integer('vehicleID')->nullable();
             $table->timestamps();

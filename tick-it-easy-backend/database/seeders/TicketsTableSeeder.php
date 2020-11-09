@@ -31,12 +31,16 @@ class TicketsTableSeeder extends Seeder
     }
 
     function makeTicket($price,$routeID,$onDiscount){
+        $createdAt =  Carbon::createFromFormat('Y-m-d H:i:s',Carbon::now());
+        $updatedAt = Carbon::createFromFormat('Y-m-d H:i:s',Carbon::now());
+        $createdAt->setTimezone('Europe/Paris');
+        $updatedAt->setTimezone('Europe/Paris');
         DB::table('tickets')->insert([
             'price' => $price,
             'routeID' => $routeID,
             'onDiscount' => $onDiscount,
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'created_at' => $createdAt,
+            'updated_at' => $updatedAt,
         ]);
     }
 }

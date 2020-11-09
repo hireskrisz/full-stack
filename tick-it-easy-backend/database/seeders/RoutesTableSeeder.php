@@ -90,18 +90,24 @@ class RoutesTableSeeder extends Seeder
     }
 
     function makeRoute($from,$to,$startTime,$endTime,$vehicleID){
+        $createdAt =  Carbon::createFromFormat('Y-m-d H:i:s',Carbon::now());
+        $updatedAt = Carbon::createFromFormat('Y-m-d H:i:s',Carbon::now());
+        $createdAt->setTimezone('Europe/Paris');
+        $updatedAt->setTimezone('Europe/Paris');
         DB::table('routes')->insert([
             'from' => $from,
             'to' => $to,
             'startTime' => $startTime,
             'endTime' => $endTime,
             'vehicleID' => $vehicleID,
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'created_at' => $createdAt,
+            'updated_at' => $updatedAt,
         ]);
     }
 
     function getTime($time){
-        return Carbon::createFromFormat('Y-m-d H:i:s', $time);
+        $date = Carbon::createFromFormat('Y-m-d H:i:s', $time);
+        $date->setTimezone('Europe/Paris');
+        return $date;
     }
 }

@@ -20,14 +20,18 @@ class UsersTableSeeder extends Seeder
     }
 
     function makeUser($name,$email,$password,$bucket,$isAdmin){
+        $createdAt =  Carbon::createFromFormat('Y-m-d H:i:s',Carbon::now());
+        $updatedAt = Carbon::createFromFormat('Y-m-d H:i:s',Carbon::now());
+        $createdAt->setTimezone('Europe/Paris');
+        $updatedAt->setTimezone('Europe/Paris');
         DB::table('users')->insert([
             'name' => $name,
             'email' => $email,
             'password' => $password,
             'bucket' => $bucket,
             'isAdmin' => $isAdmin,
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'created_at' => $createdAt,
+            'updated_at' => $updatedAt,
         ]);
     }
 }

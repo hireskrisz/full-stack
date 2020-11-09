@@ -149,16 +149,14 @@ class TicketsController extends Controller
             return response()->json(['success'=>false,'message'=>'The onDiscount field must be boolean '.$request->input('onDiscount')]);
         }
         else{
-            $ticket->price = intval($request->input('price'));
-            $ticket->routeID = intval($request->input('routeID'));
-            $ticket->onDiscount =  boolval($request->input('onDiscount'));
-            $ticket->available = true;
-            $ticket->save();
+            $date = Carbon::createFromFormat('Y-m-d H:i:s', Carbon::now(),'Europe/Paris');
+            $date->setTimezone('Europe/Paris');
             DB::table('tickets')->where('id',$id)->update([
                 'price' => intval($request->input('price')),
                 'routeID' => intval($request->input('routeID')),
                 'onDiscount' => boolval($request->input('onDiscount')),
-                'available' => $ticket->available
+                'available' => $ticket->available,
+                'updated_at' => $date
             ]);
             return response()->json([
                 'success'=>true,

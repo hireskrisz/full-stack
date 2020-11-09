@@ -138,10 +138,13 @@ class VehiclesController extends Controller
             return response()->json(['success'=>false,'message'=>'The capacity field must be a number']);
         }
         else{
+            $date = Carbon::createFromFormat('Y-m-d H:i:s', Carbon::now());
+            $date->setTimezone('Europe/Paris');
             DB::table('vehicles')->where('id',$id)->update([
                 'type' => $request->input('type'),
                 'license' => Carbon::createFromFormat('Y-m-d', $request->input('license')),
                 'capacity' => intval($request->input('capacity')),
+                'updated_at' => $date
             ]);
             return response()->json([
                 'success'=>true,

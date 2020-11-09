@@ -47,12 +47,16 @@ class VehiclesTableSeeder extends Seeder
     }
 
     function makeVehicle($type,$license,$capacity){
+        $createdAt =  Carbon::createFromFormat('Y-m-d H:i:s',Carbon::now());
+        $updatedAt = Carbon::createFromFormat('Y-m-d H:i:s',Carbon::now());
+        $createdAt->setTimezone('Europe/Paris');
+        $updatedAt->setTimezone('Europe/Paris');
         DB::table('vehicles')->insert([
             'type' => $type,
             'license' => $license,
             'capacity' => $capacity,
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            'created_at' => $createdAt,
+            'updated_at' => $updatedAt
         ]);
     }
 
