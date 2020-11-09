@@ -166,7 +166,7 @@ class RoutesController extends Controller
             ]);
             return response()->json([
                 'success'=>true,
-                'message'=>'An id='.$id.' route is updated to: '
+                'message'=>'An id='.$id.' route is changed to: '
                                     .$request->input('from').
                                     ', to: '.$request->input('to').
                                     ', startTime: '.$request->input('startTime').

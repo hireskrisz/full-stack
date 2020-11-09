@@ -70,7 +70,7 @@ class TicketsController extends Controller
             $ticket->save();
             return response()->json([
                 'success'=>true,
-                'message'=>'A new ticket is created for price: '
+                'message'=>'A new ticket is created with price: '
                                     .$request->input('price').
                                     ', routeID: '.$request->input('routeID').
                                     ', onDiscount: '.$request->input('onDiscount')
@@ -150,7 +150,7 @@ class TicketsController extends Controller
             ]);
             return response()->json([
                 'success'=>true,
-                'message'=>'An id='.$id.' ticket is updated for price: '
+                'message'=>'An id='.$id.' ticket is changed to price: '
                                     .$request->input('price').
                                     ', routeID: '.$request->input('routeID').
                                     ', onDiscount: '.$request->input('onDiscount')

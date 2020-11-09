@@ -59,7 +59,7 @@ class VehiclesController extends Controller
             $vehicle->save();
             return response()->json([
                 'success'=>true,
-                'message'=>'A new vehicle is created for type: '
+                'message'=>'A new vehicle is created with type: '
                                     .$request->input('type').
                                     ', license: '.$request->input('license').
                                     ', capacity: '.$request->input('capacity')]);
@@ -137,7 +137,7 @@ class VehiclesController extends Controller
             ]);
             return response()->json([
                 'success'=>true,
-                'message'=>'The id='.$id.' vehicle is changed for type: '
+                'message'=>'The id='.$id.' vehicle is changed to type: '
                                     .$request->input('type').
                                     ', license: '.$request->input('license').
                                     ', capacity: '.$request->input('capacity')]);
