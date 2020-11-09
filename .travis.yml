@@ -19,7 +19,7 @@ jobs:
         - php artisan migrate
         - php artisan db:seed
       script:
-        - php artisan test --testsuite=Feature --stop-on-failure
+        - php artisan test 
       deploy:
         provider: heroku
         skip_cleanup: true
