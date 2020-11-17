@@ -1,0 +1,68 @@
+<div class="registration-page">
+  <div class="registration-page__title">
+    <h2>registration</h2>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="registration-page__content" fxLayout="column" fxLayoutGap="15px">
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur neque nulla, venenatis id mollis eget,
+      dapibus eget dui. Proin tempor cursus nulla et porttitor. Phasellus et ultrices mauris,
+      sit amet tristique nunc.
+    </div>
+    <mat-horizontal-stepper #stepper>
+      <mat-step [stepControl]="firstFormGroup" errorMessage="Data is required.">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>Fill out your data</ng-template>
+          <div fxLayout="row" fxLayoutGap="20px">
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Last name, First name" formControlName="name" required>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Ex.: id@domain.code" formControlName="email" required>
+            </mat-form-field>
+          </div>
+          <div fxLayout="column" fxLayoutGap="15px">
+            <p>Fill out your name and email address!</p>
+            <button mat-button color="accent" matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup" errorMessage="Password is required.">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Fill out your address</ng-template>
+          <div fxLayout="row" fxLayoutGap="20px">
+            <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input matInput placeholder="Password" formControlName="password" required>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Password again</mat-label>
+              <input matInput placeholder="Password again" formControlName="passwordAgain" required>
+            </mat-form-field>
+          </div>
+          <div fxLayout="column" fxLayoutGap="15px">
+            <p>Fill out your password inputs!</p>
+            <div fxLayout="row" fxLayoutGap="15px">
+              <button mat-button color="accent" matStepperPrevious>Back</button>
+              <button mat-button color="accent" matStepperNext>Next</button>
+            </div>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <div fxLayout="column" fxLayoutGap="15px">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur neque nulla, venenatis id mollis eget,
+            dapibus eget dui. Proin tempor cursus nulla et porttitor. Phasellus et ultrices mauris,
+            sit amet tristique nunc.</p>
+          <div fxLayout="row" fxLayoutGap="15px">
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+          </div>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </div>
+</div>

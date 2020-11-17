@@ -1,0 +1,7 @@
+@import "src/styles";
+
+.ticket {
+  ::ng-deep .mat-button {
+    border: 1px solid aquamarine;
+  }
+}

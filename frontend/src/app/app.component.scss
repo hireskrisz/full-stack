@@ -1,0 +1,37 @@
+@import 'src/styles';
+
+.home-page {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  app-footer {
+    margin-top: auto;
+    width: 100%;
+  }
+
+  ::ng-deep .home-page__container {
+    padding-top: 25px;
+    height: -webkit-fill-available;
+    h1 {
+      font-size: 60px;
+      color: aquamarine;
+      line-height: normal;
+      width: fit-content;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-size: 40px;
+      color: aquamarine;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
