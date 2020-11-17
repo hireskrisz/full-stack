@@ -8,7 +8,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatListModule} from "@angular/material/list";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatInputModule} from '@angular/material/input';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { HeaderComponent } from './header/header.component';
@@ -48,6 +48,7 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatListModule,
     MatInputModule,
     ReactiveFormsModule,
+    FormsModule,
     MatButtonModule,
     MatExpansionModule,
     MatIconModule,
