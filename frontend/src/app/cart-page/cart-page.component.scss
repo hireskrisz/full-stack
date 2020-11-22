@@ -10,5 +10,34 @@
 
   &__content {
     margin-top: 30px;
+
+    &-summary-txt {
+      color: aquamarine;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    &-summary-num {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    &-summary-header {
+      color: aquamarine;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    &-summary-list {
+      font-weight: bold;
+    }
+
+    ::ng-deep .mat-button {
+      border: 1px solid aquamarine;
+      width: 100px;
+    }
+
+    .border-warn {
+      border: 1px solid darkred;
+    }
   }
 }

@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TicketsPageComponent } from './tickets-page.component';
+import {HttpClientModule} from "@angular/common/http";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
 
 describe('TicketsPageComponent', () => {
   let component: TicketsPageComponent;
@@ -8,6 +10,10 @@ describe('TicketsPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [
+        HttpClientModule,
+        HttpClientTestingModule
+      ],
       declarations: [ TicketsPageComponent ]
     })
     .compileComponents();

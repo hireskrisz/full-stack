@@ -23,6 +23,13 @@ import { TicketComponent } from './ticket/ticket.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from "@angular/material/sort";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {HttpClientModule} from "@angular/common/http";
+import { NewTicketDialogComponent } from './new-ticket-dialog/new-ticket-dialog.component';
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -36,7 +43,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     TicketsPageComponent,
     SearchBarComponent,
     TicketComponent,
-    RegistrationPageComponent
+    RegistrationPageComponent,
+    NewTicketDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +60,13 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatButtonModule,
     MatExpansionModule,
     MatIconModule,
-    MatStepperModule
+    MatStepperModule,
+    MatTabsModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
+    HttpClientModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

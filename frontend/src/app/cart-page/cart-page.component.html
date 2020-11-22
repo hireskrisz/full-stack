@@ -3,7 +3,45 @@
     <h2>Cart</h2>
   </div>
   <mat-divider></mat-divider>
-  <div class="cart-page__content">
-    content will be here
+  <div class="cart-page__content" fxLayout="column">
+    <div class="cart-page__content-summary-header" fxLayout="row" fxLayoutAlign="space-between center">
+      <div class="cart-page__content-summary-header-name">From - To</div>
+      <div class="cart-page__content-summary-header-info">By</div>
+      <div class="cart-page__content-summary-header-info">Valid to</div>
+      <div class="cart-page__content-summary-header-price">Price</div>
+    </div>
+    <br>
+    <div>
+      <div class="cart-page__content-summary-list" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="cart-page__content-summary-list-name">somewhere - somewhere</div>
+        <div class="cart-page__content-summary-list-info">Bus</div>
+        <div class="cart-page__content-summary-list-info">2021.12.12</div>
+        <div class="cart-page__content-summary-list-price">11 520 Ft</div>
+      </div>
+      <br>
+      <div class="cart-page__content-summary-list" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="cart-page__content-summary-list-name">somewhere - somewhere</div>
+        <div class="cart-page__content-summary-list-info">Bus</div>
+        <div class="cart-page__content-summary-list-info">2021.12.12</div>
+        <div class="cart-page__content-summary-list-price">11 520 Ft</div>
+      </div>
+    </div>
+    <br>
+    <mat-divider></mat-divider>
+    <br>
+    <div class="cart-page__content-summary" fxLayout="row" fxLayoutAlign="space-between center">
+      <div fxLayout="row" fxLayoutGap="15px">
+        <button mat-button color="accent">Pay</button>
+        <button mat-button color="warn" class="border-warn">Delete</button>
+      </div>
+      <div fxLayout="row" fxLayoutGap="20px">
+        <div class="cart-page__content-summary-txt">
+          Summary:
+        </div>
+        <div class="cart-page__content-summary-num">
+          12 321 FT
+        </div>
+      </div>
+    </div>
   </div>
 </div>

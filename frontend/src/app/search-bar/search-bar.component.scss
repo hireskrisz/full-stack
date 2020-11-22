@@ -1,0 +1,9 @@
+@import "src/styles";
+
+.search-bar {
+
+  ::ng-deep .mat-button {
+    border: 1px solid aquamarine;
+    width: 25%;
+  }
+}

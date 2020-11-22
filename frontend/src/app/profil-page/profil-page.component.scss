@@ -10,5 +10,21 @@
 
   &__content {
     margin-top: 30px;
+
+    &-data {
+      span {
+        font-size: 15px;
+        font-weight: bold;
+      }
+    }
+
+    ::ng-deep .mat-button {
+      border: 1px solid aquamarine;
+      width: 25%;
+    }
+
+    .border-warn {
+      border: 1px solid darkred;
+    }
   }
 }

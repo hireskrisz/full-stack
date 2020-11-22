@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from "@angular/common/http"
 
 @Component({
   selector: 'app-tickets-page',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TicketsPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+
+    this.http.get('https://tick-it-easy-backend.herokuapp.com/api/tickets').subscribe( result => {
+      console.log(result);
+    });
   }
+
+
 
 }

@@ -1,1 +1,29 @@
-<p>search-bar works!</p>
+<div class="search-bar" fxLayout="column" fxLayoutGap="15px">
+  <div class="search-bar__disc"></div>
+  <div class="search-bar__func" fxLayout="column">
+    <mat-form-field appearance="outline" fxFlex>
+      <mat-label>Search by name</mat-label>
+      <input type="text" matInput placeholder="Ex. Budapest">
+    </mat-form-field>
+    <div fxLayout="row" fxLayoutAlign="space-around" fxFlex fxLayoutGap="20px">
+      <mat-form-field appearance="outline" fxFlex>
+        <mat-label>Search by vehicle</mat-label>
+        <mat-select disableOptionCentering>
+          <mat-option value="Bus">Bus</mat-option>
+          <mat-option value="Train">Train</mat-option>
+          <mat-option value="Airplane">Airplane</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline" fxFlex>
+        <mat-label>Search by status</mat-label>
+        <mat-select disableOptionCentering>
+          <mat-option value="Available">Available</mat-option>
+          <mat-option value="Unavailable">Unavailable</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="search-bar__btn" fxLayoutAlign="end center">
+    <button mat-button color="accent">Keresés</button>
+  </div>
+</div>
