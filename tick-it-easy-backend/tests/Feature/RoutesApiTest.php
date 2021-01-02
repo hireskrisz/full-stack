@@ -126,7 +126,7 @@ class RoutesApiTest extends TestCase
             'endTime' => '2021-10-20 15:45:00',
             'vehicleID' => 10
         ]);
-        $routeFromDatabase = Route::where('from','Moszkva')->where('to','Tokió')->where('startTime','2021-10-20 12:00:00')
+        $routeFromDatabase = Route::select('id')->where('from','Moszkva')->where('to','Tokió')->where('startTime','2021-10-20 12:00:00')
                                     ->where('endTime','2021-10-20 15:45:00')->where('vehicleID',10)->first()->toArray();
         
         $this->delete( '/api/routes/'.$routeFromDatabase['id'],[],

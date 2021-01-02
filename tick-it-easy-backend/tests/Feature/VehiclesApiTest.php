@@ -31,6 +31,16 @@ class VehiclesApiTest extends TestCase
     }
 
     public function testCreateVehicle(){
+        $loginResponse = $this->json(
+            'POST',
+            '/api/login',
+            [
+                'email' => 'peter@erdosi.com',
+                'password'=> '12345678',
+                'password_confirmation' => '12345678'
+            ]
+        );
+
         $response = $this->json(
             'POST',
             '/api/vehicles',
@@ -38,6 +48,20 @@ class VehiclesApiTest extends TestCase
                 'type' => 'busz',
                 'license' => '2021-05-03',
                 'capacity' => 130
+            ],
+            [
+                'HTTP_AUTHORIZATION' =>"Bearer {$loginResponse['token']}",
+                'CONTENT_TYPE' => 'application/ld+json',
+                'HTTP_ACCEPT' => 'application/ld+json' 
+            ]
+        );
+        $logout = $this->json(
+            'POST',
+            '/api/logout',
+            [
+                'HTTP_AUTHORIZATION' =>"Bearer {$loginResponse['token']}",
+                'CONTENT_TYPE' => 'application/ld+json',
+                'HTTP_ACCEPT' => 'application/ld+json' 
             ]
         );
         $this->assertDatabaseHas('vehicles',[
@@ -49,6 +73,7 @@ class VehiclesApiTest extends TestCase
     }
 
     public function testEditVehicle(){
+        
         $this->json(
             'PUT',
             '/api/vehicles/1',
@@ -66,6 +91,15 @@ class VehiclesApiTest extends TestCase
     }
 
     public function testDestroyVehicle(){
+        $loginResponse = $this->json(
+            'POST',
+            '/api/login',
+            [
+                'email' => 'peter@erdosi.com',
+                'password'=> '12345678',
+                'password_confirmation' => '12345678'
+            ]
+        );
         $response = $this->json(
             'POST',
             '/api/vehicles',
@@ -73,6 +107,11 @@ class VehiclesApiTest extends TestCase
                 'type' => 'villamos',
                 'license' => '2100-05-03',
                 'capacity' => 130
+            ],
+            [
+                'HTTP_AUTHORIZATION' =>"Bearer {$loginResponse['token']}",
+                'CONTENT_TYPE' => 'application/ld+json',
+                'HTTP_ACCEPT' => 'application/ld+json' 
             ]
         );
         $this->assertDatabaseHas('vehicles',[
@@ -82,7 +121,20 @@ class VehiclesApiTest extends TestCase
         ]);
         $vehicleFromDatabase = Vehicle::where('type','villamos')->where('license','2100-05-03')->where('capacity',130)->first()->toArray();
         
-        $this->delete( '/api/vehicles/'.$vehicleFromDatabase['id']);
+        $this->delete( '/api/vehicles/'.$vehicleFromDatabase['id'],[],[
+            'HTTP_AUTHORIZATION' =>"Bearer {$loginResponse['token']}",
+            'CONTENT_TYPE' => 'application/ld+json',
+            'HTTP_ACCEPT' => 'application/ld+json' 
+        ]);
+        $logout = $this->json(
+            'POST',
+            '/api/logout',
+            [
+                'HTTP_AUTHORIZATION' =>"Bearer {$loginResponse['token']}",
+                'CONTENT_TYPE' => 'application/ld+json',
+                'HTTP_ACCEPT' => 'application/ld+json' 
+            ]
+        );
         $this->assertDatabaseMissing('vehicles',$vehicleFromDatabase);
         $response->assertStatus(200);
     }

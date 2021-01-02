@@ -39,17 +39,17 @@ Route::middleware('auth:api')->group(function () {
 
     Route::post('routes',[RoutesController::class,'store'])->middleware('api.admin');
     Route::put('routes/{route}',[RoutesController::class,'update']);
-    Route::delete('routes/{route}',[RoutesController::class,'delete'])->middleware('api.admin');
+    Route::delete('routes/{route}',[RoutesController::class,'destroy'])->middleware('api.admin');
     
     Route::post('tickets',[TicketsController::class,'store'])->middleware('api.admin');
     Route::put('tickets/{ticket}',[TicketsController::class,'update']);
-    Route::delete('tickets/{ticket}',[TicketsController::class,'delete'])->middleware('api.admin');
+    Route::delete('tickets/{ticket}',[TicketsController::class,'destroy'])->middleware('api.admin');
 
 
     Route::post('vehicles',[VehiclesController::class,'store'])->middleware('api.admin');
     Route::put('vehicles/{vehicle}',[VehiclesController::class,'update']);
-    Route::delete('vehicles/{vehicle}',[VehiclesController::class,'delete'])->middleware('api.admin');
+    Route::delete('vehicles/{vehicle}',[VehiclesController::class,'destroy'])->middleware('api.admin');
 
     Route::put('users/{user}',[VehiclesController::class,'update']);
-    Route::delete('users/{user}',[VehiclesController::class,'delete'])->middleware('api.admin');
+    Route::delete('users/{user}',[VehiclesController::class,'destroy'])->middleware('api.admin');
 });
