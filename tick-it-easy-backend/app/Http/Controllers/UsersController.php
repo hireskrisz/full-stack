@@ -15,7 +15,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        return Users::all();
     }
 
     /**
@@ -46,7 +46,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -71,21 +71,17 @@ class UsersController extends Controller
     {
         
         $user = User::where('id',$id)->first();
-
-        if($request->input('name') && $request->input('password') ){
+        if($request->input('bucket')){
             DB::table('users')->where('id',$id)->update([
-                'name' => $request->input('name'),
-                'password' => Hash::make($request['password']),
-    
+                'bucket' => $request->input('bucket'),
             ]);
         }
-        else if($request->input('name')){
+        if($request->input('name')){
             DB::table('users')->where('id',$id)->update([
                 'name' => $request->input('name')
             ]);
         }
-
-        else if($request->input('password')){
+        if($request->input('password')){
             DB::table('users')->where('id',$id)->update([
                 'password' => Hash::make($request['password'])
             ]);
@@ -104,13 +100,7 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        $user = User::where('id',$id)->first();
-        if($user != null){
-            $user->delete();
-            return response()->json(['message'=> 'The id='.$id.' user is deleted successfully','success'=>true]);
-        }
-        else{
-            return response()->json(['message'=> 'The id='.$id.' user isn\'t in the database','success'=>false]);
-        }
+        $user->delete();
+        return response()->json(['message'=> 'The id='.$id.' user is deleted successfully','success'=>true]);
     }
 }
