@@ -103,7 +103,6 @@ class RoutesApiTest extends TestCase
                 'password_confirmation' => '12345678'
             ]
         );
-        echo dd($loginResponse);
         $response = $this->json(
             'POST',
             '/api/routes',

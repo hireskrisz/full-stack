@@ -18,6 +18,8 @@ jobs:
         - php artisan key:generate
         - php artisan migrate
         - php artisan db:seed
+        - chmod -R 777 storage
+        - php artisan passport:keys
       script:
         - php artisan test 
       deploy:
