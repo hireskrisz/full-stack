@@ -1,26 +1,26 @@
-<div class="ticket">
-  <mat-accordion>
+<div *ngFor="let route of routesData">
+  <div class="ticket">
+    <mat-accordion>
 
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-         From BUD to UK by Bus - Available quantity: 15 (seat)
-        </mat-panel-title>
-        <mat-panel-description>
-          Valid: 2020.11.18 - 2021.01.30
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <div fxLayout="column" fxLayoutGap="10px">
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur neque nulla, venenatis id
-          mollis eget, dapibus eget dui. Proin tempor cursus nulla et porttitor. Phasellus et
-          ultrices mauris, sit amet tristique nunc.
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            From {{route.from}} to {{ route.to }}
+          </mat-panel-title>
+          <mat-panel-description>
+            Valid: {{ route.startTime | customDate }} --- {{route.endTime | customDate}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div fxLayout="column" fxLayoutGap="10px">
+          <div>
+            Active passengers: {{ route.activePassengers }}
+          </div>
+          <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="end end">
+            <button mat-button color="accent">Save</button>
+            <button mat-button color="accent">Add to cart</button>
+          </div>
         </div>
-        <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="end end">
-          <button mat-button color="accent">Save</button>
-          <button mat-button color="accent">Add to cart</button>
-        </div>
-      </div>
-    </mat-expansion-panel>
-  </mat-accordion>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
 </div>

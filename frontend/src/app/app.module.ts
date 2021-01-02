@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,9 +27,14 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from "@angular/material/sort";
 import {MatPaginatorModule} from "@angular/material/paginator";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { NewTicketDialogComponent } from './new-ticket-dialog/new-ticket-dialog.component';
 import {MatSelectModule} from "@angular/material/select";
+import {CustomDatePipe} from "./pipes/custom-date.pipe";
+import {registerLocaleData} from "@angular/common";
+import localeHu from '@angular/common/locales/hu'
+import { Interceptor } from "./services/interceptor.service";
+import {AuthService} from "./services/auth.service";
 
 @NgModule({
   declarations: [
@@ -44,7 +49,8 @@ import {MatSelectModule} from "@angular/material/select";
     SearchBarComponent,
     TicketComponent,
     RegistrationPageComponent,
-    NewTicketDialogComponent
+    NewTicketDialogComponent,
+    CustomDatePipe
   ],
   imports: [
     BrowserModule,
@@ -68,7 +74,23 @@ import {MatSelectModule} from "@angular/material/select";
     HttpClientModule,
     MatSelectModule
   ],
-  providers: [],
+  providers: [
+    CustomDatePipe,
+    {
+      provide: LOCALE_ID,
+      useValue: 'hu-HU'
+    },
+    AuthService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: Interceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    registerLocaleData(localeHu, 'hu-HU')
+  }
+}

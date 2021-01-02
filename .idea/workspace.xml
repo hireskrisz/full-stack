@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5dbf3739-02a8-424a-8514-a82e1bc40715" name="Default Changelist" comment="adding login wip other way">
+    <list default="true" id="5dbf3739-02a8-424a-8514-a82e1bc40715" name="Default Changelist" comment="wip 3 to deploy/build">
+      <change afterPath="$PROJECT_DIR$/frontend/debug.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/pipes/custom-date.pipe.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/services/auth-guard.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/services/interceptor.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020__11__05__21_06_[Default_Changelist]/.browserslistrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020__11__05__21_06_[Default_Changelist]/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020__11__05__21_06_[Default_Changelist]/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020__11__05__21_06_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020__11__05__21_06__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020__11__05__21_15_[Default_Changelist]/.browserslistrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020__11__05__21_15_[Default_Changelist]/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020__11__05__21_15_[Default_Changelist]/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020__11__05__21_15_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020__11__05__21_15__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020__11__06__16_47_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020__11__06__16_47__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020__11__06__19_41_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2020__11__06__19_41__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/frontend/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/frontend/main.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/polyfills.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/frontend/polyfills.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/polyfills.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/frontend/polyfills.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/frontend/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/styles.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/frontend/styles.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/frontend/vendor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/dist/frontend/vendor.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/dist/frontend/vendor.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-page/admin-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-page/admin-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-page/admin-page.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-page/admin-page.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-page/admin-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-page/admin-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/header/header.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/header/header.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/header/header.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/profil-page/profil-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/profil-page/profil-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/profil-page/profil-page.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/profil-page/profil-page.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/profil-page/profil-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/profil-page/profil-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/registration-page/registration-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/registration-page/registration-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/registration-page/registration-page.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/registration-page/registration-page.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/registration-page/registration-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/registration-page/registration-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/ticket/ticket.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/ticket/ticket.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/ticket/ticket.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/ticket/ticket.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/ticket/ticket.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/ticket/ticket.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/ticket/ticket.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/ticket/ticket.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/tickets-page/tickets-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/tickets-page/tickets-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/tickets-page/tickets-page.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/tickets-page/tickets-page.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/tickets-page/tickets-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/tickets-page/tickets-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/environments/environment.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,13 +85,21 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../m-dia-aj-nl" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Hires Krisztián\Desktop\tick-it-easy\frontend\src\app" />
       <recent name="$PROJECT_DIR$/frontend/src/app/public" />
       <recent name="$PROJECT_DIR$/frontend" />
       <recent name="$PROJECT_DIR$/frontend/dist/frontend" />
@@ -61,6 +123,12 @@
       <workItem from="1604834237355" duration="2891000" />
       <workItem from="1604844572111" duration="5437000" />
       <workItem from="1604865611312" duration="3921000" />
+      <workItem from="1605479429661" duration="367000" />
+      <workItem from="1605480061067" duration="3722000" />
+      <workItem from="1605633896420" duration="15041000" />
+      <workItem from="1606057059916" duration="616000" />
+      <workItem from="1606155248048" duration="98000" />
+      <workItem from="1609583086998" duration="25852000" />
     </task>
     <task id="LOCAL-00001" summary="adding basic FE app and travis ci config">
       <created>1604607500967</created>
@@ -146,16 +214,39 @@
       <option name="project" value="LOCAL" />
       <updated>1604870080311</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="adding FE basic design app">
+      <created>1605655538435</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1605655538435</updated>
+    </task>
+    <task id="LOCAL-00014" summary="small fix to build">
+      <created>1605655855321</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1605655855321</updated>
+    </task>
+    <task id="LOCAL-00015" summary="small fix 2">
+      <created>1605656520652</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1605656520652</updated>
+    </task>
+    <task id="LOCAL-00016" summary="wip 3 to deploy/build">
+      <created>1605657299698</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1605657299698</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/frontend/server.js" />
-      </list>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -170,21 +261,31 @@
     <MESSAGE value="adding login wip rip" />
     <MESSAGE value="adding login wip other way" />
     <MESSAGE value="adding login delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding login delete" />
+    <MESSAGE value="adding FE basic design app" />
+    <MESSAGE value="small fix to build" />
+    <MESSAGE value="small fix 2" />
+    <MESSAGE value="wip 3 to deploy/build" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip 3 to deploy/build" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1609607050877">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609607050877" />
     <state x="724" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604841527109">
       <screen x="63" y="27" width="1857" height="1053" />
     </state>
     <state x="724" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@63.27.1857.1053" timestamp="1604841527109" />
-    <state x="576" y="112" width="912" height="882" key="CommitChangelistDialog2" timestamp="1604870080062">
-      <screen x="63" y="27" width="1857" height="1053" />
+    <state x="530" y="84" width="912" height="882" key="CommitChangelistDialog2" timestamp="1605657298557">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="530" y="84" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605657298557" />
     <state x="2450" y="87" width="912" height="904" key="CommitChangelistDialog2/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@1920.0.1920.1080" timestamp="1604608039187" />
     <state x="576" y="112" width="912" height="882" key="CommitChangelistDialog2/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@63.27.1857.1053" timestamp="1604870080062" />
-    <state x="812" y="317" width="424" height="484" key="FileChooserDialogImpl" timestamp="1604855496023">
-      <screen x="63" y="27" width="1857" height="1053" />
+    <state x="774" y="286" width="424" height="484" key="FileChooserDialogImpl" timestamp="1606155344613">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="774" y="286" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606155344613" />
     <state x="2694" y="297" width="424" height="484" key="FileChooserDialogImpl/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@1920.0.1920.1080" timestamp="1604613050184" />
     <state x="812" y="317" width="424" height="484" key="FileChooserDialogImpl/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@63.27.1857.1053" timestamp="1604855496023" />
     <state x="2164" y="103" width="1485" height="872" key="MergeDialog" timestamp="1604607386520">
@@ -195,9 +296,14 @@
       <screen x="63" y="27" width="1857" height="1053" />
     </state>
     <state x="757" y="236" width="458" height="633" key="RollbackChangesDialog/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@63.27.1857.1053" timestamp="1604688152546" />
-    <state x="630" y="281" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1604870082225">
-      <screen x="63" y="27" width="1857" height="1053" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1605481376150">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="461" y="164" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605481376150" />
+    <state x="586" y="251" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1605657347844">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="586" y="251" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605657347844" />
     <state x="2506" y="261" width="800" height="556" key="Vcs.Push.Dialog.v2/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@1920.0.1920.1080" timestamp="1604608093990" />
     <state x="630" y="281" width="800" height="556" key="Vcs.Push.Dialog.v2/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@63.27.1857.1053" timestamp="1604870082225" />
     <state x="810" y="470" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604683263669">
@@ -205,5 +311,9 @@
     </state>
     <state x="2692" y="454" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@1920.0.1920.1080" timestamp="1604607339468" />
     <state x="810" y="470" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@63.27.1857.1053" timestamp="1604683263669" />
+    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1609621379196">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="119" width="585" height="801" key="find.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609621379196" />
   </component>
 </project>

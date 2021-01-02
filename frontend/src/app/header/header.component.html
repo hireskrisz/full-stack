@@ -1,24 +1,28 @@
 <mat-toolbar color="primary" class="home-page__header" fxLayoutAlign="center center">
   <div class="home-page__header-content" fxLayout="row" fxLayoutAlign="space-between">
-    <div routerLink="/">
+    <div>
       <h1>TickItEasy!</h1>
     </div>
-    <div fxLayout="row">
+    <div *ngIf="auth.isAuthenticated()" fxLayout="row">
       <button mat-button fxLayout="row" fxLayoutGap="15px" routerLink="/tickets">
         <mat-icon>explorer</mat-icon>
         <span>Tickets</span>
       </button>
-      <button mat-button fxLayout="row" fxLayoutGap="15px" routerLink="/admin">
+      <button  *ngIf="auth.getAdminAccess() === 'true'" mat-button fxLayout="row" fxLayoutGap="15px" routerLink="/admin">
         <mat-icon>admin_panel_settings</mat-icon>
         <span>Admin</span>
-      </button>
-      <button mat-button fxLayout="row" fxLayoutGap="15px" routerLink="/profile">
-        <mat-icon>account_circle</mat-icon>
-        <span>Profile</span>
       </button>
       <button mat-button fxLayout="row" fxLayoutGap="15px" routerLink="/cart">
         <mat-icon>shopping_basket</mat-icon>
         <span>Cart</span>
+      </button>
+      <button mat-button fxLayout="row" fxLayoutGap="15px" routerLink="/profile">
+        <mat-icon>account_circle</mat-icon>
+        <span>{{ auth.getUserUseName() }}</span>
+      </button>
+      <button mat-button fxLayout="row" fxLayoutGap="15px" (click)="logout()">
+        <mat-icon>power_settings_new</mat-icon>
+        <span>Logout</span>
       </button>
     </div>
   </div>

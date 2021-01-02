@@ -3,35 +3,39 @@
     <h2>Profile</h2>
   </div>
   <mat-divider></mat-divider>
-  <div class="profile-page__content">
+  <div class="profile-page__content" fxLayout="column" fxLayoutGap="15px">
     <div class="profile-page__content-data">
       <h3>Profile datas</h3>
       <mat-divider></mat-divider>
       <br>
       <div fxLayout="row" fxLayoutGap="15px">
         <span>Name:</span>
-        <span>Ahmed Ahbar</span>
+        <span>{{ auth.getUserUseName() }}</span>
       </div>
       <div fxLayout="row" fxLayoutGap="15px">
         <span>Email:</span>
-        <span>Ahmed@Ahbar.com</span>
+        <span>{{ auth.getUserMail() }}</span>
+      </div>
+      <div fxLayout="row" fxLayoutGap="15px">
+        <span>Money:</span>
+        <span>TODO:  FT</span>
       </div>
     </div>
-    <div class="profile-page__content-data">
+    <form [formGroup]="modifyNameFormGroup" class="profile-page__content-data">
       <h3>Profile datas modify</h3>
       <mat-divider></mat-divider>
       <br>
       <div>
         <mat-form-field appearance="outline" fxFlex>
           <mat-label>Modify account name</mat-label>
-          <input type="text" matInput placeholder="Ex. Other Other">
+          <input type="text" formControlName="newName" matInput placeholder="Ex. Other Other">
         </mat-form-field>
       </div>
       <br>
       <div fxLayout="row" fxLayoutGap="15px">
-        <button mat-button color="accent">Modify</button>
-        <button mat-button color="warn" class="border-warn">Delete Account</button>
+        <button mat-button color="accent" (click)="modify()" [disabled]="!modifyNameFormGroup.valid">Modify</button>
+        <button mat-button color="warn" class="border-warn" (click)="deleteAccount()">Delete Account</button>
       </div>
-    </div>
+    </form>
   </div>
 </div>

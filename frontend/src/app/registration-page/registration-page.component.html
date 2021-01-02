@@ -11,7 +11,7 @@
     </div>
     <mat-horizontal-stepper #stepper>
       <mat-step [stepControl]="firstFormGroup" errorMessage="Data is required.">
-        <form [formGroup]="firstFormGroup">
+        <form [formGroup]="firstFormGroup" >
           <ng-template matStepLabel>Fill out your data</ng-template>
           <div fxLayout="row" fxLayoutGap="20px">
             <mat-form-field appearance="outline">
@@ -58,8 +58,8 @@
             dapibus eget dui. Proin tempor cursus nulla et porttitor. Phasellus et ultrices mauris,
             sit amet tristique nunc.</p>
           <div fxLayout="row" fxLayoutGap="15px">
-            <button mat-button matStepperPrevious>Back</button>
             <button mat-button (click)="stepper.reset()">Reset</button>
+            <button mat-button (click)="regSubmit()">Apply</button>
           </div>
         </div>
       </mat-step>
