@@ -61,9 +61,9 @@ class TicketsController extends Controller
         else if(!is_numeric($request->input('price'))){
             return response()->json(['success'=>false,'message'=>'The price field must be a number']);
         }
-        else if(!in_array(intval($request->input('routeID')),$routeIDs)){
-            return response()->json(['success'=>false,'message'=>'The type routeID must be one of the available id\'s:','routes: ' =>$availableRoutes]);
-        }
+        // else if(!in_array(intval($request->input('routeID')),$routeIDs)){
+        //     return response()->json(['success'=>false,'message'=>'The type routeID must be one of the available id\'s:','routes: ' =>$availableRoutes]);
+        // }
         else if(!in_array($request->input('onDiscount'),$booleans)){
             return response()->json(['success'=>false,'message'=>'The onDiscount field must be boolean '.$request->input('onDiscount')]);
         }
@@ -142,9 +142,9 @@ class TicketsController extends Controller
         else if(!is_numeric($request->input('price'))){
             return response()->json(['success'=>false,'message'=>'The price field must be a number']);
         }
-        else if(!in_array(intval($request->input('routeID')),$routeIDs)){
-            return response()->json(['success'=>false,'message'=>'The type routeID must be one of the available id\'s:','routes: ' =>$availableRoutes]);
-        }
+        // else if(!in_array(intval($request->input('routeID')),$routeIDs)){
+        //     return response()->json(['success'=>false,'message'=>'The type routeID must be one of the available id\'s:','routes: ' =>$availableRoutes]);
+        // }
         else if(!in_array($request->input('onDiscount'),$booleans)){
             return response()->json(['success'=>false,'message'=>'The onDiscount field must be boolean '.$request->input('onDiscount')]);
         }
