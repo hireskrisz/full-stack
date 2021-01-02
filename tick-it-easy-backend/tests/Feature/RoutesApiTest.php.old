@@ -31,6 +31,17 @@ class RoutesApiTest extends TestCase
     }
 
     public function testCreateRoute(){
+
+        $loginResponse = $this->json(
+            'POST',
+            '/api/login',
+            [
+                'email' => 'peter@erdosi.com',
+                'password'=> '12345678',
+                'password_confirmation' => '12345678'
+            ]
+        );
+
         $response = $this->json(
             'POST',
             '/api/routes',
@@ -40,6 +51,18 @@ class RoutesApiTest extends TestCase
                 'startTime' => '2021-10-20 10:00:00',
                 'endTime' => '2021-10-20 13:45:00',
                 'vehicleID' => 10
+            ],
+            ['HTTP_AUTHORIZATION' => "Bearer {$loginResponse['token']}",
+            'CONTENT_TYPE' => 'application/ld+json',
+            'HTTP_ACCEPT' => 'application/ld+json']
+        );
+        $logout = $this->json(
+            'POST',
+            '/api/logout',
+            [
+                'HTTP_AUTHORIZATION' =>"Bearer {$loginResponse['token']}",
+                'CONTENT_TYPE' => 'application/ld+json',
+                'HTTP_ACCEPT' => 'application/ld+json' 
             ]
         );
         $this->assertDatabaseHas('routes',[
@@ -71,6 +94,16 @@ class RoutesApiTest extends TestCase
     }
 
     public function testDestroyRoute(){
+        $loginResponse = $this->json(
+            'POST',
+            '/api/login',
+            [
+                'email' => 'peter@erdosi.com',
+                'password'=> '12345678',
+                'password_confirmation' => '12345678'
+            ]
+        );
+
         $response = $this->json(
             'POST',
             '/api/routes',
@@ -80,8 +113,12 @@ class RoutesApiTest extends TestCase
                 'startTime' => '2021-10-20 10:00:00',
                 'endTime' => '2021-10-20 13:45:00',
                 'vehicleID' => 10
-            ]
+            ],
+            ['HTTP_AUTHORIZATION' => "Bearer {$loginResponse['token']}",
+            'CONTENT_TYPE' => 'application/ld+json',
+            'HTTP_ACCEPT' => 'application/ld+json']
         );
+        
         $this->assertDatabaseHas('routes',[
             'from' => 'Moszkva',
             'to' => 'Tokió',
@@ -92,7 +129,19 @@ class RoutesApiTest extends TestCase
         $routeFromDatabase = Route::where('from','Moszkva')->where('to','Tokió')->where('startTime','2021-10-20 12:00:00')
                                     ->where('endTime','2021-10-20 15:45:00')->where('vehicleID',10)->first()->toArray();
         
-        $this->delete( '/api/routes/'.$routeFromDatabase['id']);
+        $this->delete( '/api/routes/'.$routeFromDatabase['id'],[],
+        ['HTTP_AUTHORIZATION' => "Bearer {$loginResponse['token']}",
+        'CONTENT_TYPE' => 'application/ld+json',
+        'HTTP_ACCEPT' => 'application/ld+json']);
+        $logout = $this->json(
+            'POST',
+            '/api/logout',
+            [
+                'HTTP_AUTHORIZATION' =>"Bearer {$loginResponse['token']}",
+                'CONTENT_TYPE' => 'application/ld+json',
+                'HTTP_ACCEPT' => 'application/ld+json' 
+            ]
+        );
         $this->assertDatabaseMissing('routes',$routeFromDatabase);
         $response->assertStatus(200);
     }
