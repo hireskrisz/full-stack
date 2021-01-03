@@ -71,6 +71,11 @@ class UsersController extends Controller
     {
         
         $user = User::where('id',$id)->first();
+        if($request->input('balance')){
+            DB::table('users')->where('id',$id)->update([
+                'balance' => $request->input('balance'),
+            ]);
+        }
         if($request->input('bucket')){
             DB::table('users')->where('id',$id)->update([
                 'bucket' => $request->input('bucket'),
