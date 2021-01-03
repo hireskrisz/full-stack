@@ -15,7 +15,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return Users::all();
+        return User::all();
     }
 
     /**
@@ -46,7 +46,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        
+        return User::where('id',$id)->first();
     }
 
     /**

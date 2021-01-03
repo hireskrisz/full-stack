@@ -50,6 +50,8 @@ Route::middleware('auth:api')->group(function () {
     Route::put('vehicles/{vehicle}',[VehiclesController::class,'update']);
     Route::delete('vehicles/{vehicle}',[VehiclesController::class,'destroy'])->middleware('api.admin');
 
-    Route::put('users/{user}',[VehiclesController::class,'update']);
-    Route::delete('users/{user}',[VehiclesController::class,'destroy'])->middleware('api.admin');
+    Route::get('users', [UsersController::class, 'index'])->middleware('api.admin');
+    Route::get('users/{user}', [UsersController::class, 'show'])->middleware('api.admin');
+    Route::put('users/{user}',[UsersController::class,'update']);
+    Route::delete('users/{user}',[UsersController::class,'destroy'])->middleware('api.admin');
 });
