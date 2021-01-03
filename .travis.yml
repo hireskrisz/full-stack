@@ -19,7 +19,7 @@ jobs:
         - php artisan migrate
         - php artisan db:seed
         - php artisan passport:keys
-        - php artisan passport:client --personal
+        - php artisan passport:client --personal 
       script:
         - php artisan test 
       deploy:
