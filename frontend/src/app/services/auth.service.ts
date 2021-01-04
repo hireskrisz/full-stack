@@ -18,6 +18,14 @@ export class AuthService {
     return sessionStorage.getItem('admin');
   }
 
+  public getBalance(): string {
+    return sessionStorage.getItem('balance');
+  }
+
+  public getUserId(): string {
+    return sessionStorage.getItem('userid');
+  }
+
   public getUserUseName(): string {
     return sessionStorage.getItem('username');
   }

@@ -18,12 +18,12 @@
       </div>
       <div fxLayout="row" fxLayoutGap="15px">
         <span>Money:</span>
-        <span>TODO:  FT</span>
+        <span>{{ auth.getBalance() }}  FT</span>
       </div>
     </div>
+    <h3>Profile datas modify</h3>
+    <mat-divider></mat-divider>
     <form [formGroup]="modifyNameFormGroup" class="profile-page__content-data">
-      <h3>Profile datas modify</h3>
-      <mat-divider></mat-divider>
       <br>
       <div>
         <mat-form-field appearance="outline" fxFlex>
@@ -31,10 +31,32 @@
           <input type="text" formControlName="newName" matInput placeholder="Ex. Other Other">
         </mat-form-field>
       </div>
-      <br>
       <div fxLayout="row" fxLayoutGap="15px">
-        <button mat-button color="accent" (click)="modify()" [disabled]="!modifyNameFormGroup.valid">Modify</button>
-        <button mat-button color="warn" class="border-warn" (click)="deleteAccount()">Delete Account</button>
+        <button mat-button color="accent" (click)="modifyName()" [disabled]="!modifyNameFormGroup.valid">Modify Name</button>
+      </div>
+    </form>
+    <form [formGroup]="modifyPassFormGroup" class="profile-page__content-data">
+      <br>
+      <div>
+        <mat-form-field appearance="outline" fxFlex>
+          <mat-label>Add money</mat-label>
+          <input type="text" formControlName="newPass" matInput>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxLayoutGap="15px">
+        <button mat-button color="accent" (click)="modifyPass()" [disabled]="!modifyPassFormGroup.valid">Modify Password</button>
+      </div>
+    </form>
+    <form [formGroup]="modifyBalanceFormGroup" class="profile-page__content-data">
+      <br>
+      <div>
+        <mat-form-field appearance="outline" fxFlex>
+          <mat-label>Modify Balance</mat-label>
+          <input type="number" formControlName="newBalance" matInput>
+        </mat-form-field>
+      </div>
+      <div fxLayout="row" fxLayoutGap="15px">
+        <button mat-button color="accent" (click)="modifyBalance()" [disabled]="!modifyBalanceFormGroup.valid">Add money</button>
       </div>
     </form>
   </div>

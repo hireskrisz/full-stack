@@ -4,11 +4,7 @@
   </div>
   <mat-divider></mat-divider>
   <div class="registration-page__content" fxLayout="column" fxLayoutGap="15px">
-    <div>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur neque nulla, venenatis id mollis eget,
-      dapibus eget dui. Proin tempor cursus nulla et porttitor. Phasellus et ultrices mauris,
-      sit amet tristique nunc.
-    </div>
+
     <mat-horizontal-stepper #stepper>
       <mat-step [stepControl]="firstFormGroup" errorMessage="Data is required.">
         <form [formGroup]="firstFormGroup" >
@@ -31,7 +27,7 @@
       </mat-step>
       <mat-step [stepControl]="secondFormGroup" errorMessage="Password is required.">
         <form [formGroup]="secondFormGroup">
-          <ng-template matStepLabel>Fill out your address</ng-template>
+          <ng-template matStepLabel>Fill out your password</ng-template>
           <div fxLayout="row" fxLayoutGap="20px">
             <mat-form-field appearance="outline">
               <mat-label>Password</mat-label>
@@ -54,9 +50,7 @@
       <mat-step>
         <ng-template matStepLabel>Done</ng-template>
         <div fxLayout="column" fxLayoutGap="15px">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur neque nulla, venenatis id mollis eget,
-            dapibus eget dui. Proin tempor cursus nulla et porttitor. Phasellus et ultrices mauris,
-            sit amet tristique nunc.</p>
+          <p>We are done, apply or reset the datas!!</p>
           <div fxLayout="row" fxLayoutGap="15px">
             <button mat-button (click)="stepper.reset()">Reset</button>
             <button mat-button (click)="regSubmit()">Apply</button>

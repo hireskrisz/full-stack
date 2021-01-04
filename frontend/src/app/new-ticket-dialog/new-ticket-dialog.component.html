@@ -1,1 +1,41 @@
-<p>new-ticket-dialog works!</p>
+<form [formGroup]="newRouteFormGroup" fxLayout="column" fxLayoutGap="20px">
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <h2>New Route</h2>
+    <button mat-icon-button (click)="closeDialog()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div fxLayout="column" fxFlex>
+    <mat-form-field appearance="outline">
+      <mat-label>Active Passengers</mat-label>
+      <input formControlName="activePassengers" matInput type="text">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Start Time</mat-label>
+      <input formControlName="startTime" matInput [matDatepicker]="pickerStart">
+      <mat-datepicker-toggle matSuffix [for]="pickerStart"></mat-datepicker-toggle>
+      <mat-datepicker #pickerStart></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>End Time</mat-label>
+      <input formControlName="endTime" matInput [matDatepicker]="pickerEnd">
+      <mat-datepicker-toggle matSuffix [for]="pickerEnd"></mat-datepicker-toggle>
+      <mat-datepicker #pickerEnd></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>From</mat-label>
+      <input formControlName="from" matInput type="text">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>To</mat-label>
+      <input formControlName="to" matInput type="text">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Vehicle ID</mat-label>
+      <input formControlName="vehicleID" matInput type="text">
+    </mat-form-field>
+  </div>
+  <div>
+    <button mat-button color="accent" (click)="formSubmitCreate()">Create</button>
+  </div>
+</form>

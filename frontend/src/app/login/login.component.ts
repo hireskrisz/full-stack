@@ -7,6 +7,7 @@ import {Router} from "@angular/router";
 export interface ILogin {
   token: string,
   user: {
+    balance: number,
     bucket: string,
     created_at: Date,
     email: string,
@@ -50,8 +51,11 @@ export class LoginComponent implements OnInit {
       sessionStorage.setItem('token', this.loginUserData.token);
       sessionStorage.setItem('username', this.loginUserData.user.name);
       sessionStorage.setItem('usermail', this.loginUserData.user.email);
+      sessionStorage.setItem('userid', String(this.loginUserData.user.id));
+      sessionStorage.setItem('balance', String(this.loginUserData.user.balance));
       this.router.navigate(['tickets']);
       sessionStorage.setItem('admin', String(this.loginUserData.user.isAdmin));
+      console.log('login', result);
     }, error => {
       console.log(error);
     })

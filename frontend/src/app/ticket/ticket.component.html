@@ -16,8 +16,7 @@
             Active passengers: {{ route.activePassengers }}
           </div>
           <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="end end">
-            <button mat-button color="accent">Save</button>
-            <button mat-button color="accent">Add to cart</button>
+            <button mat-button color="accent" (click)="addToCart(route.id)">Add to cart</button>
           </div>
         </div>
       </mat-expansion-panel>

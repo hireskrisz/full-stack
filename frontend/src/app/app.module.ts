@@ -35,6 +35,9 @@ import {registerLocaleData} from "@angular/common";
 import localeHu from '@angular/common/locales/hu'
 import { Interceptor } from "./services/interceptor.service";
 import {AuthService} from "./services/auth.service";
+import { MatDialogModule} from "@angular/material/dialog";
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MAT_DATE_LOCALE, MatNativeDateModule} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -72,7 +75,10 @@ import {AuthService} from "./services/auth.service";
     MatSortModule,
     MatPaginatorModule,
     HttpClientModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [
     CustomDatePipe,
@@ -85,7 +91,12 @@ import {AuthService} from "./services/auth.service";
       provide: HTTP_INTERCEPTORS,
       useClass: Interceptor,
       multi: true
-    }
+    },
+    {
+      provide: MAT_DATE_LOCALE,
+      useValue: 'hu-HU'
+    },
+    MatDatepickerModule
   ],
   bootstrap: [AppComponent]
 })

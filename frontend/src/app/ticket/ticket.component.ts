@@ -23,6 +23,7 @@ export interface IRoute {
 export class TicketComponent implements OnInit {
 
   public routesData: IRoute[];
+  public routes = [];
 
   constructor(private http: HttpClient) { }
 
@@ -33,4 +34,10 @@ export class TicketComponent implements OnInit {
     });
   }
 
+  addToCart(id: number) {
+    this.routes.push(id);
+    console.log(this.routes);
+    sessionStorage.setItem('routesArray', JSON.stringify(this.routes));
+    console.log('--------', sessionStorage.getItem('routesArray'));
+  }
 }
