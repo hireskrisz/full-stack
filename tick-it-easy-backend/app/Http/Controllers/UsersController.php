@@ -106,7 +106,13 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        $user->delete();
-        return response()->json(['message'=> 'The id='.$id.' user is deleted successfully','success'=>true]);
+        $user = User::where('id',$id)->first();
+        if($user != null){
+            $user->delete();
+            return response()->json(['message'=> 'The id='.$id.' Ticuseret is deleted successfully','success'=>true]);
+        }
+        else{
+            return response()->json(['message'=> 'The id='.$id.' user isn\'t in the database','success'=>false]);
+        }
     }
 }
