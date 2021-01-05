@@ -8,6 +8,7 @@ import {apiURL} from "../../environments/environment";
 import {AuthService} from "../services/auth.service";
 import {MatDialog} from "@angular/material/dialog";
 import {NewTicketDialogComponent} from "../new-ticket-dialog/new-ticket-dialog.component";
+import {log} from "util";
 
 export interface IUser {
   balance: number,
@@ -67,14 +68,14 @@ export class AdminPageComponent implements OnInit {
     this.http.get(apiURL + 'users', {headers: headers}).subscribe( result => {
       // @ts-ignore
       this.dataSourceUsers = result;
-      console.log(this.dataSourceUsers);
+      // console.log(this.dataSourceUsers);
 
     })
 
     this.http.get(apiURL + 'vehicles', {headers: headers}).subscribe( result => {
       // @ts-ignore
       this.dataSourceVehicles = result;
-      console.log(this.dataSourceVehicles);
+      // console.log(this.dataSourceVehicles);
 
     })
   }
@@ -90,7 +91,7 @@ export class AdminPageComponent implements OnInit {
       this.http.get(apiURL + 'users', {headers: headers}).subscribe( result => {
         // @ts-ignore
         this.dataSourceUsers = result;
-        console.log(this.dataSourceUsers);
+        // console.log(this.dataSourceUsers);
 
       })
     })
@@ -134,6 +135,13 @@ export class AdminPageComponent implements OnInit {
     this.dialog.open(NewTicketDialogComponent, {
       width: '500px',
       height: 'auto'
+    }).afterClosed().subscribe( result => {
+      this.http.get(apiURL + 'routes').subscribe( result => {
+        // @ts-ignore
+        this.dataSourceTickets = result;
+        // console.log(this.dataSourceTickets);
+
+      });
     })
   }
 }

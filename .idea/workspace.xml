@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5dbf3739-02a8-424a-8514-a82e1bc40715" name="Default Changelist" comment="wip 3 to deploy/build">
+    <list default="true" id="5dbf3739-02a8-424a-8514-a82e1bc40715" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-page/admin-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-page/admin-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dokumentáció_végleges.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Dokumentáció_végleges.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/admin-page/admin-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin-page/admin-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/new-ticket-dialog/new-ticket-dialog.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/new-ticket-dialog/new-ticket-dialog.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/new-ticket-dialog/new-ticket-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/new-ticket-dialog/new-ticket-dialog.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/profil-page/profil-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/profil-page/profil-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/profil-page/profil-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/profil-page/profil-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/registration-page/registration-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/registration-page/registration-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/ticket/ticket.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/ticket/ticket.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/ticket/ticket.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/ticket/ticket.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +79,10 @@
       <workItem from="1606155248048" duration="98000" />
       <workItem from="1609583086998" duration="25852000" />
       <workItem from="1609675190151" duration="560000" />
-      <workItem from="1609784298836" duration="14000000" />
+      <workItem from="1609784298836" duration="14333000" />
+      <workItem from="1609802890375" duration="604000" />
+      <workItem from="1609803739273" duration="35000" />
+      <workItem from="1609829291408" duration="2046000" />
     </task>
     <task id="LOCAL-00001" summary="adding basic FE app and travis ci config">
       <created>1604607500967</created>
@@ -202,7 +196,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605657299698</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="connecting wip 2">
+      <created>1609802660456</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1609802660456</updated>
+    </task>
+    <task id="LOCAL-00018" summary="doksi felhasznaloi">
+      <created>1609803763662</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1609803763662</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +233,9 @@
     <MESSAGE value="small fix to build" />
     <MESSAGE value="small fix 2" />
     <MESSAGE value="wip 3 to deploy/build" />
-    <option name="LAST_COMMIT_MESSAGE" value="wip 3 to deploy/build" />
+    <MESSAGE value="connecting wip 2" />
+    <MESSAGE value="doksi felhasznaloi" />
+    <option name="LAST_COMMIT_MESSAGE" value="doksi felhasznaloi" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1609607050877">
@@ -236,10 +246,10 @@
       <screen x="63" y="27" width="1857" height="1053" />
     </state>
     <state x="724" y="301" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@63.27.1857.1053" timestamp="1604841527109" />
-    <state x="530" y="84" width="912" height="882" key="CommitChangelistDialog2" timestamp="1605657298557">
+    <state x="530" y="84" width="912" height="882" key="CommitChangelistDialog2" timestamp="1609803762233">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="530" y="84" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605657298557" />
+    <state x="530" y="84" key="CommitChangelistDialog2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609803762233" />
     <state x="2450" y="87" width="912" height="904" key="CommitChangelistDialog2/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@1920.0.1920.1080" timestamp="1604608039187" />
     <state x="576" y="112" width="912" height="882" key="CommitChangelistDialog2/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@63.27.1857.1053" timestamp="1604870080062" />
     <state x="774" y="286" width="424" height="484" key="FileChooserDialogImpl" timestamp="1606155344613">
@@ -261,10 +271,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605481376150" />
-    <state x="586" y="251" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1605657347844">
+    <state x="586" y="251" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1609803765558">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="586" y="251" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605657347844" />
+    <state x="586" y="251" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1609803765558" />
     <state x="2506" y="261" width="800" height="556" key="Vcs.Push.Dialog.v2/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@1920.0.1920.1080" timestamp="1604608093990" />
     <state x="630" y="281" width="800" height="556" key="Vcs.Push.Dialog.v2/63.27.1857.1053/1920.0.1920.1080/0.1080.1920.1080@63.27.1857.1053" timestamp="1604870082225" />
     <state x="810" y="470" width="438" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604683263669">

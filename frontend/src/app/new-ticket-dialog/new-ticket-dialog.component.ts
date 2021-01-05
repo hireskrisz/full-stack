@@ -44,9 +44,11 @@ export class NewTicketDialogComponent implements OnInit {
     params = params.append('startTime', this.newRouteFormGroup.controls.startTime.value);
     params = params.append('vehicleID', this.newRouteFormGroup.controls.vehicleID.value);
     params = params.append('activePassengers', this.newRouteFormGroup.controls.activePassengers.value);
-
+    console.log('params', params);
+    console.log('form', this.newRouteFormGroup);
     this.http.post(apiURL + 'routes', null,{headers: headers, params: params}).subscribe( result => {
       console.log(result);
+      this.closeDialog();
     })
   }
 }
